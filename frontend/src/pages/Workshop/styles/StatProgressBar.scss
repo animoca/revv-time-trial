@@ -1,0 +1,91 @@
+@import "../../../variables";
+
+
+.stat-progress-bar-wrapper{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    flex-grow: 1;
+
+    @media (max-width: $desktop) {
+        padding: 0 8px;
+    }
+    
+    .stat-progress-bar-info {
+    
+        @media (max-width: $desktop) {
+            font-size: .75rem;
+        }
+    
+        .label {
+            position: absolute;
+            display: none;
+        }
+    
+        .label-image {
+            position: absolute;
+            left: 0;
+            display: inline-block;
+    
+            img {
+                width: 24px;
+                margin-bottom: 4px;
+            }
+        }
+        .value {
+            text-align: right;
+        }
+    }
+
+    .outside-delta {
+        position: absolute;
+        top: 0;
+        margin-left: 200px;
+    }
+
+    .value-delta {
+        display: inline-block;
+        margin-left: 8px;
+    
+        @media (max-width: $desktop) {
+            margin-left: 4px;
+        }
+
+        &#high {
+            color: $revv-green;
+        }
+
+        &#low {
+            color:$revv-red;
+        }
+    }
+    
+    .stat-progress-bar-container{
+        display: flex;
+        width: 100%;
+        height: 4px;
+        margin-bottom: 8px;
+        background-color: black;
+        
+        .bar{
+            height: 100%;
+            -webkit-transition: width 0.25s ease-in-out;
+            -moz-transition: width 0.25s ease-in-out;
+            -o-transition: width 0.25s ease-in-out;
+            transition: width 0.25s ease-in-out;
+        }
+        .bar#normal{
+            background-color: $revv-red;
+        }
+        .bar#delta-high{
+            background-color: $revv-green;
+        }
+        .bar#delta-low{
+            background-color: rgba(218,0,14,0.5);
+        }
+    }
+}
+
+#timetrial .outside-delta {
+    margin-left: 100px;
+}

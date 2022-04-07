@@ -1,0 +1,60 @@
+@import "../../../variables";
+
+
+#workshop {
+    .bottom-attribute-pane{
+        position:fixed;
+        bottom: 0;
+        z-index: 3;
+        width: 100%;
+        padding-top: 10px;
+        background: #292930;
+        font-weight: bold;
+        text-transform: capitalize;
+        text-align: left;
+
+        @media (min-width: ($desktop + 1px)) {
+            display: none;
+        }
+
+        .details{
+            display: inline-block;
+            font-size: .75rem;
+            padding-left: 15px;
+
+            .label{
+                font-size: 1rem;
+            }
+
+            .season{
+                color:red;
+                margin-left: 8px;
+            }
+            .rarity{
+                margin-left: 16px;
+                text-transform: uppercase;
+
+                &#common{
+                    color: $revv-rarity-common;
+                }
+                &#epic{
+                    color: $revv-rarity-epic;
+                }
+                &#legendary{
+                    color: $revv-rarity-legendary;
+                }
+                &#rare{
+                    color: $revv-rarity-rare;
+                }
+                &#apex{
+                    color: $revv-rarity-apex;
+                }
+            }
+        }
+
+        .stat-bars{
+            display: flex;
+        }
+    }
+}
+

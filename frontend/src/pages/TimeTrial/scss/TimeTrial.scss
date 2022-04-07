@@ -1,0 +1,131 @@
+@import "../../../variables";
+
+
+.page-wrapper-bg {
+    width:100%;
+
+    &>div#timetrial{
+        width:100%;
+        max-width: 100%;
+    }
+}
+
+.page-wrapper-bg-race-view#timetrial{
+    background: darkcyan url("../img/bg-race.jpg") top left/cover no-repeat;
+    width: 100%;
+    min-height: calc(100vh - 62px);
+}
+
+#timetrial {
+    .secondary-navigation-tabs {
+        .tab-content {
+            padding-top: 0;
+        }
+    }
+
+    .track-overview{
+        text-align: left;
+        background: transparent linear-gradient(160deg, #5C5C64 0%, $revv-black 100%);
+
+        .top{
+            padding: 12px 15px;
+            border-radius: 10px 10px 0 0;
+            background-image: linear-gradient(to right,rgba(21,21,30,0.25), $revv-black),
+            url("../../../assets/img/workshop/main-bar-pattern.png"),linear-gradient(to right,$revv-black, $revv-black);
+        }
+
+        .content{
+            position: relative;
+            z-index: 1;
+            height: 60vh;
+            padding: 8px;
+            
+            .weather-icon{
+                float: right;
+                padding: 8px;
+                background-color: black;
+                font-size: 2rem;
+            }
+
+            .standings-button{
+                position: absolute;
+                inset: auto 0 0 auto;
+                font-size: 1.375rem;
+                padding: 12px 0;
+
+                .icon{
+                    padding: 0 10px;
+                    color: $revv-red;
+                }
+            }
+
+            .next-pane{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 70%;
+
+                .revv-content-pane{
+                    background-color:transparent;
+
+                    .legend h3{
+                        font-size: .75rem;
+                        font-weight: normal;
+                    }
+
+                    .d-flex{
+                        display: block !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+    .track-details{
+        text-align: left;
+        background: linear-gradient(160deg, #464559,transparent 60%);
+        
+        .top{
+            background-image: linear-gradient(to right,rgba(21,21,30,0.25), #15151e),
+            url("../../../assets/img/workshop/main-bar-pattern.png"),linear-gradient(to right,#15151e,#15151e);
+        }
+    }
+
+
+.track-country {
+    width: 50px;
+    margin-right: 10px;
+    align-self: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+@media (max-width: $desktop) {
+    #timetrial-wrapper {
+        max-width: 375px;
+        margin: auto;
+    }
+}
+
+@media (max-width: $desktop) {
+    #timetrial-wrapper {
+        h3 {
+            font-size: 12pt;
+            line-height: 16px;
+        }
+    }
+
+    .mb-sticky-bottom {
+        position: fixed;
+        bottom: 0;
+        z-index: 9;
+        width: 100%;
+        padding: 0 10px 10px;
+        background: black;
+        max-width: 375px;
+    }
+}

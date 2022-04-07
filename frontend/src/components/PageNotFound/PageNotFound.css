@@ -1,0 +1,9 @@
+.page-not-found-banner {
+    height: 100vh;
+    padding-top: 200px;
+    color: white !important;
+}
+
+.page-not-found-banner h2 {
+    text-align: center;
+}

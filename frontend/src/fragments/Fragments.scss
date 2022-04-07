@@ -1,0 +1,175 @@
+@import '../variables';
+
+.content-col {
+    margin-top: 80px;
+    padding: 0 20px 0 0;
+    color: white !important;
+    text-align: left;
+
+    legend {
+        width: auto;
+        text-align: left;
+    }
+}
+
+.content-register-border {
+    border: solid #707070;
+    border-width: 3px 3px 0 0;
+    border-top-right-radius: 16px;
+
+    .card {
+        padding-left: 0 !important;
+        border-bottom: 1px solid #707070 !important;
+        border-radius: 0 !important;
+        background-color: transparent !important;
+        color: #717175;
+    }
+
+    .card-body, .card-header {
+        padding-left: 0 !important;
+    }
+
+    .accordion-open.card-header {
+      color: white !important;
+    }
+}
+  
+
+.create-wallet-section {
+    padding: 80px 30px;
+    border-radius: 3px;
+    background-image: url('../assets/img/repeat_grid19.png');
+}
+
+.connect-btn-img {
+    height: 60px;
+
+    &.portis-logo {
+        width: 150px;
+    }
+}
+
+.create-wallet-btn:hover {
+    cursor: pointer;
+}
+
+.connect-new-section, .connect-account-instruction {
+    min-height: 60px;
+}
+
+.connect-wallet-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: $revv-dark-gray;
+    border-radius: 12px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+body {
+    .modal-backdrop {
+        z-index: 940;
+    }
+
+    .modal[role="dialog"] {
+        z-index: 950;
+    }
+}
+
+.modal .modal-dialog {
+    max-width: 400px;
+    margin: 0 auto;
+
+    @media (max-width: $mobile) {
+        max-width: 360px;
+    }
+}
+
+.register-input {
+    padding-left: 1px !important;
+    border: solid #707070 !important;
+    border-width: 0 0 1px !important;
+    border-radius: 0px !important;
+    background-color: transparent !important;
+    color: white !important;
+
+    :active {
+        border: none !important;
+        background-color: transparent !important;
+    }
+}
+
+.checkbox-section {
+    margin-top: 30px;
+}
+
+.complete-btn , .disabled-btn{
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+}
+
+.complete-btn {
+    background-color: $revv-red;
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+}
+
+.disabled-btn {
+    background-color: #888;
+}
+
+.input-error-msg-label {
+    float: right;
+    font-size: .75rem !important;
+    color: $revv-red;
+}
+
+.connect-btns-well {
+    padding: 25px;
+    background-image: url('../assets/img/repeat_grid19.png');
+}
+
+.fortmatic-inline {
+    width: auto;
+    height: 50px;
+}
+
+.connect-new-fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 10px 20px 10px 0;
+}
+
+.beginners-legend {
+    width: auto;
+    margin-right: 0;
+    padding: 0 10px 0 0;
+    text-align: left;
+}
+
+.with-fortmatic {
+    @media(max-width: $tablet) {
+        display: none;
+    }
+}
+
+.accordion-container {
+    @media (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.legend-bold {
+    @media (max-width: $tablet) {
+        font-size: 1.5625rem;
+    }
+}

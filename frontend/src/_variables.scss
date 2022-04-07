@@ -1,0 +1,59 @@
+/** Viewport breakpoints */
+
+$high-def: 1200px;
+$desktop: 992px;
+$tablet: 768px;
+$mobile: 576px;
+$mini: 480px;
+$tiny: 320px;
+
+/** Fonts */
+// Font Family
+$font-revv: "Segoe UI", "Roboto", "Droid Sans", "Helvetica Neue", sans-serif;
+$font-titillium: "Titillium Web", sans-serif;
+
+// Font Sizes
+$base-font-size: 12pt;
+$fs-h1: 38pt;
+$fs-h2: 32pt;
+$fs-h3: 22pt;
+$fs-sub-h1: 18pt;
+$fs-sub-h2: 14pt;
+
+// Line Heights
+$base-line-height: 18pt;
+$lh-h1: 48pt;
+$lh-h2: 36pt;
+$lh-h3: 25pt;
+$lh-sub-h1: 23pt;
+$lh-sub-h2: 18pt;
+
+/** Colors */
+$revv-black: #15151E;
+$revv-red: #E10600;
+$revv-dark-gray: #2C2C34;
+$revv-gray: #5B5B61;
+$revv-light-gray: #89898E;
+$revv-blue: #258bf8;
+$revv-green: #2BBE82;
+$revv-purple: #905CEB;
+$revv-yellow: #FC973F;
+
+/** Rarity Colors */
+$revv-rarity-common: #ACACAC;
+$revv-rarity-epic: #B584FF;
+$revv-rarity-legendary: #F6BC65;
+$revv-rarity-rare: #0A8C4B;
+$revv-rarity-apex: #01FFF7;
+
+/** Crates */
+$epic: #9E82FF;
+$rare: #65E0B0;
+$legendary: #FED841;
+$common: #CBD6E0;
+
+/** Time Trial */
+$tt-white: #E7E7E8;
+
+
+/** Buttons */

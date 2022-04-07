@@ -1,0 +1,12 @@
+{
+    "mongodb": {
+        "url": "MONGO_URI"
+    },
+    "api": {
+        "access_control": {
+            "__name": "CORS_ALLOWED_ORIGINS",
+            "__format": "json"
+        }
+    },
+    "contractAddress": "CONTRACT_ADDRESS"
+}

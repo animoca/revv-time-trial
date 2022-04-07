@@ -1,0 +1,68 @@
+@import '../../../variables';
+.leave-modal {
+    .btn-wrapper {
+        button+button {
+            margin-left: 15px;
+        }
+    }
+
+    div {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.finish-modal {
+    div {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+.revv-stake-modal {
+    h4 {
+        color: white;
+    }
+
+    .disclaimer {
+        font-size: 1rem;
+        line-height: 14pt;
+    }
+}
+
+.revv-escrow-league-modal {
+    .stake-revv {
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            height: 50px;
+        }
+
+        .btns-container {
+            text-align: end;
+        }
+    }
+
+    .txt-amount {
+        display: inline-block;
+        min-width: 150px;
+        margin-bottom: 10px;
+        padding: 5px;
+        border-radius: 24px;
+        background-color: $tt-white;
+        color: black;
+
+        span {
+            margin-left: 5px;
+        }
+    }
+
+    .btn+.btn {
+        margin-left: 10px;
+    }
+}

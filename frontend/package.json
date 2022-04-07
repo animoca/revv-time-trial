@@ -1,0 +1,78 @@
+{
+  "name": "nft-website",
+  "version": "3.10.26",
+  "private": true,
+  "author": "Animoca Brands",
+  "license": "MIT",
+  "dependencies": {
+    "@animoca/f1dt-core_metadata": "^2.2.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.24",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@portis/web3": "^2.0.0-beta.54",
+    "@walletconnect/web3-provider": "^1.5.0",
+    "bits.js": "^0.1.1",
+    "bitski": "^0.10.4",
+    "bootstrap": "^4.3.1",
+    "chart.js": "^2.9.3",
+    "dotenv": "^8.1.0",
+    "ethers": "^5.0.23",
+    "fortmatic": "1.0.1",
+    "i18next": "^17.0.18",
+    "i18next-browser-languagedetector": "^3.0.3",
+    "i18next-http-backend": "^1.0.21",
+    "iframe-resizer-react": "1.0.1",
+    "moment": "^2.24.0",
+    "node-sass": "^4.14.1",
+    "popper.js": "^1.16.1",
+    "query-string": "^6.8.3",
+    "react": "^16.8.6",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-bootstrap": "^1.0.0",
+    "react-chartjs-2": "^2.9.0",
+    "react-cookie": "^4.0.1",
+    "react-dom": "^16.8.6",
+    "react-ga": "^2.7.0",
+    "react-gtm-module": "^2.0.8",
+    "react-i18next": "^10.11.1",
+    "react-lottie": "^1.2.3",
+    "react-router-dom": "^5.1.2",
+    "react-router-hash-link": "^1.2.2",
+    "react-scripts": "3.0.1",
+    "react-share": "^3.0.1",
+    "web3": "=1.3.4",
+    "web3-eth-abi-131": "npm:web3-eth-abi@1.3.1"
+  },
+  "scripts": {
+    "start": "BROWSER=firefox react-scripts start --no-cache",
+    "build": "react-scripts build && npm run compress",
+    "compress": "node ./scripts/compressImages.js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "getProdEnv": "node ./scripts/envars.js getProd",
+    "updateProdEnv": "node --unhandled-rejections=strict ./scripts/envars.js updateProd",
+    "getStgEnv": "node ./scripts/envars.js getStg",
+    "updateStgEnv": "node --unhandled-rejections=strict ./scripts/envars.js updateStg",
+    "profile": "source-map-explorer build/static/js/*.js --html build/source-map-result.html"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.2",
+    "compress-images": "1.5.8",
+    "fs-extra": "^8.1.0",
+    "jquery": "^3.5.0",
+    "source-map-explorer": "^2.4.2"
+  }
+}

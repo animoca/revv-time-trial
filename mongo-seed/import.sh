@@ -1,0 +1,3 @@
+#!/bin/bash
+mongoimport --uri mongodb://user:password@localhost:27017/revv?authSource=admin --collection nftowner_0x6CE16F115CE95FaB92c43CcE0D42dF54Ca08dB2B --type json --file ./mongo-seed/nftowner_0x6CE16F115CE95FaB92c43CcE0D42dF54Ca08dB2B.json --jsonArray
+mongoimport --uri mongodb://user:password@localhost:27017/revv?authSource=admin --collection timetrial_attempts --type json --file ./mongo-seed/timetrial_attempts.json --jsonArray

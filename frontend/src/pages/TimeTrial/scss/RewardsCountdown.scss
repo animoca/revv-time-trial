@@ -1,0 +1,229 @@
+@import '../../../variables';
+
+#wr-wrapper {
+    background: linear-gradient(270deg, #000000 0%, $revv-black 100%);
+    padding: 80px 0;
+
+    @media (max-width: $mobile) {
+        padding: 80px 30px;
+    }
+}
+
+#home {
+    flex-direction: column;
+    display: flex;
+
+    .weekly-rewards {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        @media (max-width: $desktop) {
+            flex-direction: column;
+        }
+
+        
+        .rev-img {
+            flex: 0 0 200px;
+            margin-right: 50px;
+
+            @media (max-width: $desktop) {
+                width: 150px;
+                margin-right: 0;
+            }
+        }
+    
+        img {
+            width: 100%;
+        }
+    
+        .reward-desc {
+            display: flex;
+            padding-top: 10px;
+            border-top: 3px solid $revv-red;
+            text-align: left;
+            width: 100%;
+
+            @media (max-width: $desktop) {
+                flex-direction: column;
+            }
+    
+            .left {
+                flex-direction: column;
+                display: flex;
+                width: 50%;
+                @media (max-width: $desktop) {
+                    width: 100%;
+                }
+    
+                .timeline {
+                    display: flex;
+                    justify-content: space-between;
+        
+                    h2 {
+                        font-family: $font-revv;
+                        text-transform: uppercase;
+    
+                        @media (max-width: $mobile) {
+                            margin: 1rem 0;
+                            font-size: 1.3rem;
+                            line-height: 2rem;
+                        }
+                    }
+                }
+                .reward-pools {
+                    display:flex;
+                    justify-content:left;
+
+                    @media (max-width: $desktop) {
+                        flex-direction: column;
+                    }
+
+                    .reward-tag {
+                        display: flex;
+                        align-items: center;
+                        width: fit-content;
+                        padding: 10px 10px;
+                        margin: 0 10px 0 0;
+                        border-radius: 30px;
+                        background-color: $tt-white;
+                        color: black;
+                        font-weight: bold;
+
+                        @media (max-width: $desktop) {
+                            margin-top: 10px;
+                        }
+
+                        span:first-child {
+                            display: inline-block;
+                            min-width: 50px;
+                        }
+                        .num-eth {
+                            font-size: 1.5rem;
+                            
+                        }
+                        .currency-icon{
+                            padding:0 4px;
+                            img{
+                                max-width: 36px;
+                            }
+                        }
+                    }
+                }
+                h3 {
+                    font-weight: normal;
+                    font-size: 1.5rem;
+                    margin: .5rem 0;
+
+                    @media (max-width: $desktop) {
+                        font-size: 1rem;
+                    }
+                }
+
+                p {
+                    @media (max-width: $desktop) {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+    
+            .right {
+                display: flex;
+                flex-direction: column;
+                text-align: right;
+                width: 50%;
+
+                @media (max-width: $desktop) {
+                    width: 100%;
+                    margin-top: 25px;
+                }
+    
+                .time-remaining {
+                    display: flex;
+                    margin-left: auto;
+    
+                    @media (max-width: $desktop) {
+                        margin: 0 auto 0 0;
+                    }
+    
+                    .clock-icon {
+                        width: 30px;
+                        height: min-intrinsic;
+
+                        @media (max-width: $desktop) {
+                            width: 20px;
+                        }
+                    }
+    
+                    p {
+                        font-size: 1.2rem;
+                        margin: auto 0.5rem;
+
+                        @media (max-width: $desktop) {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+    
+                .countdown {
+                    display: flex;
+                    margin: 1rem 0 0 auto;
+    
+                    @media (max-width: $desktop) {
+                        margin: 0 auto 0 0;
+                    }
+    
+                    .countdown-panel {
+                        display: flex;
+                        flex-direction: column;
+                        width: 85px;
+                        height: 110px;
+                        margin: 0.2rem;
+                        background-color: #333334;
+                        border-radius: 5px;
+    
+                        @media (max-width: $mobile) {
+                            width: 60px;
+                            height: 80px;
+                        }
+    
+                        .wrapper {
+                            margin: auto;
+    
+                            .countdown-num {
+                                text-align: center;
+                            }
+                            .countdown-text {
+                                text-align: center;
+                                margin-bottom: 0;
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.go-timetrial {
+    padding: 1rem 4.5rem !important;
+    border-radius: 8px !important;
+    font-size: 1.2rem !important;
+    width: fit-content;
+    margin: 2rem auto 0 auto;
+
+    @media (max-width: $tablet) {
+        width: 100%;
+    }
+}
+
+#home {
+    @media (max-width: $desktop) {
+        h3 {
+            font-size: 14pt;
+            line-height: 16px;
+        }
+    }
+}

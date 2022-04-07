@@ -1,0 +1,118 @@
+@import '../../variables';
+.leaderboard {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: $revv-dark-gray;
+
+    .leaderboard-header {
+        padding-top: 10px;
+        border-top: 3px solid $revv-red;
+    }
+    
+    .heading {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding: 20px 15px 0;
+        border-bottom: 1px solid white;
+        
+        p {
+            margin-bottom: 0;
+            font-size: .75rem;
+            line-height: 14px;
+        }
+    }
+
+    .rows-container {
+        min-height: 300px;
+        max-height: 450px;
+        overflow-y: auto;
+    }
+
+    .lb-row {
+        margin: 3px -15px;
+        padding: 5px 0;
+        background-color: $revv-black;
+        line-height: 2;
+
+        &:nth-child(1) .nickname {border-color: #E88732;}
+        &:nth-child(2) .nickname {border-color: #5B7AA2;}
+        &:nth-child(3) .nickname {border-color: #73310D;}
+
+        &.highlight {
+            background-color: $tt-white;
+            color: black;
+            text-shadow: none;
+
+            .rank-badge {background-color: black; color: white;}
+            .nickname {border-color: $revv-red;}
+            .value .badge {
+                background-color: lightgray;
+                color: $revv-red; 
+            }
+
+        }
+
+        .rank {
+            padding: 0;
+        }
+
+        .rank-delta {
+            width: 32px;
+            flex: 0 0 32px;
+            margin-right: 3px;
+
+            &.drop {
+                color: $revv-red;
+            }
+            &.rise {
+                color: $revv-green;
+            }
+        }
+
+        .rank-badge {
+            width: 34px;
+            margin: auto;
+            border-bottom-right-radius: 6px;
+            background-color: white;
+            color: black;
+            font-family: $font-revv;
+            text-align: center;
+        }
+
+        .nickname {
+            display: flex;
+            border-left: 4px solid $revv-gray;
+            font-weight: bold;
+            font-family: $font-titillium;
+            
+            .nick {
+                max-width: 175px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            &.delta {   
+                padding: 0 5px;
+                justify-content: flex-start;
+                align-items: center;
+
+                .rank-badge {
+                    margin: 0;
+                }
+            }
+        }
+
+        .value {
+            padding-right: 5px;
+            font-family: $font-titillium;
+            text-align: center;
+
+            .badge {
+                padding: 0.5rem;
+                background-color: black;
+            }
+        }
+    }
+}

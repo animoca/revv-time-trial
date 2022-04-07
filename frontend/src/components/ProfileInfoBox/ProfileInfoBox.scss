@@ -1,0 +1,99 @@
+@import '../../variables';
+.profile-info-container {
+    margin: 50px 0 500px;
+}
+
+.profile-info-box {
+    border: none !important;
+}
+.profile-info-box-body {
+    background-color: $revv-dark-gray !important;
+    padding: 25px!important;
+}
+
+.profile-info-user-icon {
+    margin: 16px auto;
+    font-size: 7.333rem;
+}
+
+.profile-info-body-content {
+    min-width: 99% !important;
+
+    h4 {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.wallet-address-box {
+    min-width: 100% !important;
+    margin-bottom: 0;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: $revv-black;
+}
+
+.profile-info-input-label {
+    float: left;
+}
+.no-padding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.profile-info-input-section {
+    margin-top: 15px;
+}
+.profile-info-group-input {
+    margin-right: 10px;
+}
+
+.profile-info-input {
+    padding: 18px !important;
+    border: none !important;
+    background-color: $revv-light-gray !important;
+    color: $revv-black !important;
+
+    &::placeholder {
+        color: $revv-black !important;;
+    }
+}
+.profile-info-email-field {
+    width: 100%;
+    background-color: red;
+}
+
+.buttons-control-section {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px !important;
+
+    @media (max-width: $mobile) {
+        flex-direction: column;;
+    }
+    
+    .btn:not(:first-child) {
+        margin-left: 15px;
+
+        @media (max-width: $mobile) {
+            margin: 15px auto auto 0;
+        }
+    }
+}
+
+.btn-red {
+    background-color: $revv-red;
+}
+
+.btn-grey {
+    background-color: $revv-gray;
+}
+
+.not-verified-tag {
+    position: absolute;
+    inset: 50% 15px auto auto;
+    margin-top: -3px;
+    padding: 5px 15px;
+    border-radius: 14px;
+    background-color: #4c4c54;
+    text-transform: uppercase;
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110" height="110" viewBox="0 0 110 110">
+  <defs>
+    <clipPath id="clip-graphic-verify-success-check">
+      <rect width="110" height="110"/>
+    </clipPath>
+  </defs>
+  <g id="graphic-verify-success-check" clip-path="url(#clip-graphic-verify-success-check)">
+    <path id="fa-check-circle" d="M58.193,3a55.193,55.193,0,1,0,55.193,55.193,48.254,48.254,0,0,0-2.919-17.381l-6.9,6.766A42.75,42.75,0,0,1,104.9,58.193a46.7,46.7,0,1,1-46.7-46.7,45.457,45.457,0,0,1,32.24,13.135l5.97-5.97A53.865,53.865,0,0,0,58.193,3Zm47.9,18.177-47.9,47.9L40.017,50.9l-6.1,6.1L55.142,78.227l3.052,2.919,3.052-2.919L112.193,27.28Z" transform="translate(-3 -3.387)" fill="#e10600"/>
+  </g>
+</svg>

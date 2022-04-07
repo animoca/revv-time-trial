@@ -1,0 +1,258 @@
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap');
+@import-normalize;
+@import 'variables';
+@import './assets/css/layout.scss';
+
+body {
+  margin: 0;
+  font-family: BlinkMacSystemFont,"Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+html, body {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: white;
+  background-color: $revv-black;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+h1, h2, h3 {
+  text-align: left;
+  text-transform: capitalize;
+}
+
+h1 {
+  font: bold $fs-h1#{"/"}$lh-h2 $font-revv;
+  text-shadow: 2px 2px 5px black;
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  font: bold $fs-h2#{"/"}$lh-h2 $font-revv;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font: bold $fs-h3#{"/"}$lh-h3 $font-revv;
+  margin-bottom: 0;
+}
+
+h4 {
+  font: normal $fs-sub-h2#{"/"}$lh-sub-h2 $font-titillium;
+  text-align: left;
+  margin: 0;
+}
+
+legend > h2 {
+  margin-bottom: 0;
+}
+
+a, a:hover, a:active {
+  text-decoration: none !important;
+  color: white;
+}
+
+p, label, input, small {
+  font-family: $font-titillium;
+  text-align: left;
+}
+
+p {
+  font: normal $base-font-size#{"/"}$base-line-height;
+}
+
+small {
+  line-height: 90%;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.tl-center {
+  text-align: center;
+}
+
+.tl-left {
+  text-align: left;
+}
+
+.App {
+  text-align: center;
+}
+
+@media (max-width: $mobile) {
+  h1 {
+    font: $fs-sub-h1#{"/"}$lh-sub-h1;
+  }
+
+  h2 {
+    font: $fs-sub-h2#{"/"}$lh-sub-h2;
+  }
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}
+
+button {
+  text-transform: uppercase;
+}
+
+button:focus, button:active, button:visited {
+  outline: unset 0 !important;
+  box-shadow: unset !important;
+  border: unset;
+}
+
+.App-section-title {
+  margin: 0;
+  font-weight: 600;
+  flex: 4;
+}
+
+.App-section-line {
+  flex: 140;
+  border-bottom: 5px solid $revv-red;
+  margin-top: 20px;
+}
+
+.coming-soon {
+  color: #ffffff55;
+  font: .625rem/.75rem $font-titillium;
+  border-radius: 15px;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+@media (max-width: $desktop) {
+  .coming-soon {
+    text-align: left;
+  }
+}
+
+.App-section-line-coming-soon {
+  border-bottom: 5px solid #6f6f6f;
+}
+
+.see-what-you-missed {
+  color: $revv-red;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.clearfix {
+  clear: both;
+  width: 100%;
+}
+
+.content-section-right {
+  background: url(/static/media/repeat_grid19.d4d118ef.png);
+  height: 100%;
+}
+
+.main-page-content .content-section:nth-child(2n) .row > .content-side:first-child {
+  order: 2;
+}
+
+#terms {
+  font-family: $font-titillium;
+  padding: 50px 0;
+}
+
+#terms ol {
+  padding-left: inherit;
+}
+
+.o-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.check-icon {
+  color: $revv-red;
+  font-size: 7.5rem;
+}
+
+.modal-dialog {
+  color: white;
+}
+.modal-header {
+  border-bottom: none !important;
+}
+
+.modal-content {
+  background-color: $revv-dark-gray !important;
+  font-family: $font-titillium;
+  padding: 10px;
+}
+
+.modal-footer {
+  border-top: none !important;
+}
+
+.modal-title {
+  font-weight: bold !important;
+}
+
+.modal-body {
+  font-size: 15px;
+  color: #B8B8B8 !important;
+}
+
+.section-title-block {
+  position: relative;
+}
+
+.section-title-block hr {
+  border-bottom: 3px solid $revv-red;
+  padding-top: 10px;
+}
+
+.event-spacing {
+  margin-bottom: 70px;
+}
+
+.grid {
+  justify-content: flex-start;
+}
+
+@media (max-width: $tablet) {
+  .section-title-block hr {
+    margin-top: -1rem;
+    padding-top: 26px;
+  }
+}
+
+.page-wrapper-content {
+  position: relative;
+}
+
+body.scrollbar-flicker-fix {
+  overflow-y: hidden;
+}

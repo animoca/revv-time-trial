@@ -1,0 +1,41 @@
+@import "../../../variables";
+
+#workshop
+.col#composition-summary{
+    width: 300px;
+    flex-grow: 0;
+
+    @media (max-width: $desktop) {
+        display: none;
+    }
+
+    .composition-summary{
+        width: 285px;
+        font-weight: bold;
+        margin-right: auto;
+        background-image: linear-gradient(127deg,rgba(21,21,30,0.25), #53535e);
+        
+        .top{
+            padding: 10px;
+            font-size: 2em;
+            line-height: 100%;
+            background-image: linear-gradient(to right,rgba(21,21,30,0.25), $revv-black),
+             url("../../../assets/img/workshop/main-bar-pattern.png");
+            border-radius: 10px 10px 0 0;
+        }
+    
+        .contents{
+            position: relative;
+            display: inline-flex;
+            align-content: flex-start;
+            width: 100%;
+            flex-wrap: wrap;
+            border-radius: 0 0 10px 10px;
+
+            &#driver{
+                justify-content: center;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,1 @@
+export { TimeTrial as default } from "../../pages/TimeTrial";

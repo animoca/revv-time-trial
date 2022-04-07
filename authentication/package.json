@@ -1,0 +1,53 @@
+{
+  "name": "revv-nft-users",
+  "version": "2.0.1",
+  "private": true,
+  "author": "Animoca Brands",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/server.js",
+    "build": "babel src --out-dir dist --copy-files",
+    "buildAndServe": "npm run build && babel-node dist/server.js",
+    "serve": "babel-node dist/server.js",
+    "test": "NODE_ENV=test build && mocha --require @babel/register --exit ./test/**/*.test.js"
+  },
+  "dependencies": {
+    "@animocabrands/backend-common_library": "file:../backend-common_library",
+    "@dapperlabs/dappauth": "^2.0.1",
+    "async-redis": "^1.1.7",
+    "aws-sdk": "^2.494.0",
+    "axios": "^0.18.0",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.8",
+    "debug": "~2.6.9",
+    "eth-sig-util": "2.1.2",
+    "express-winston": "~3.1.0",
+    "mongodb": "~3.2.2",
+    "mustache": "^3.1.0",
+    "node-cleanup": "~2.1.2",
+    "regenerator-runtime": "^0.13.3",
+    "secure-token": "~1.0.0",
+    "uuid": "^3.3.2",
+    "web3": "^1.0.0-beta.55",
+    "config": "^3.2.4",
+    "core-js": "^3.4.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.2.0",
+    "serverless-http": "^2.3.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.1",
+    "sinon": "^7.3.2",
+    "supertest": "^4.0.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0"
+  }
+}

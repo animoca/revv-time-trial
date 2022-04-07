@@ -1,0 +1,32 @@
+.revv-content-pane {
+    padding: 20px;
+    border-bottom-right-radius: 12px;
+    background-color: #2C2C34;
+}
+
+fieldset.revv-right-shoulder {
+    padding-left: 0;
+    border: solid #E10600;
+    border-width: 3px 3px 0 0;
+    border-top-right-radius: 25px;
+    text-align: left;
+}
+
+fieldset.revv-right-shoulder legend,
+fieldset.revv-content-header legend {
+    width: auto;
+    padding-right: 10px;
+}
+
+.revv-content-piece {
+    padding: 10px;
+    border: solid #5B5B61;
+    border-width: 0 2px 2px 0;
+    border-bottom-right-radius: 12px;
+}
+
+.revv-content-header {
+    padding-left: 0;
+    border-top: 6px solid #5B5B61;
+    text-align: left;
+}

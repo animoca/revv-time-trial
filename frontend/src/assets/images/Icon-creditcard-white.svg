@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-Icon-creditcard-white">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Icon-creditcard-white" clip-path="url(#clip-Icon-creditcard-white)">
+    <path id="ic_credit_card_24px" d="M19.311,4H3.923A1.909,1.909,0,0,0,2.01,5.923L2,17.464a1.917,1.917,0,0,0,1.923,1.923H19.311a1.917,1.917,0,0,0,1.923-1.923V5.923A1.917,1.917,0,0,0,19.311,4Zm0,13.464H3.923v-5.77H19.311Zm0-9.617H3.923V5.923H19.311Z" transform="translate(0.424 0.613)" fill="#fff"/>
+  </g>
+</svg>

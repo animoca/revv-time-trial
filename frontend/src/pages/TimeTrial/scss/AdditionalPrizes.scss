@@ -1,0 +1,195 @@
+@import '../../../variables';
+
+#add-rw {
+    background: url('../img/bg-additionalprize.jpg') center/cover no-repeat;
+    padding: 50px 0 100px;
+
+    .emph {
+        color: $revv-red;
+    }
+
+    .timeline {
+        flex: 1 1 auto;
+        padding-top: 10px;
+        border-top: 3px solid $revv-red;
+        text-align: left;
+    }
+}
+
+.nft-prizes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+
+    .nft-carousel {
+        width: 850px;
+        margin: auto;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+
+        .carousel-control-prev {
+            > span {
+                margin-left: -150px;
+            }
+        }
+
+        .carousel-control-next {
+            > span {
+                margin-right: -150px;
+            }
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+
+            @media (max-width: $tablet) {
+                align-items: flex-end;
+
+                > span {
+                    margin: auto 0 -40px;
+                }
+            }
+        }
+    }
+
+    .nfts-carousel-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
+
+        .carousel-nft {
+            border-radius: 12px 0;
+            background-color: #15151E60;
+            margin: 6px 3px auto;
+            padding: 10px 15px;
+
+            @media (max-width: $tablet) {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    .nft-image-wrapper {
+        width: 175px;
+
+        @media (max-width: $tablet) {
+            width: 50px;
+            margin-right: 15px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .tier-prize {
+        border-radius: 12px 0;
+        background-color: #15151E60;
+        padding: 10px 15px;
+
+        &:not(:last-child) {
+            margin: auto 10px 10px auto;
+
+            @media (max-width: $desktop) {
+                margin: auto auto 10px;
+            }
+        }
+
+        .row-prize {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .row-1 {
+            flex-direction: column;
+            height: 164px;
+
+            img {
+                width: 148px;
+                height: auto;
+            }
+        }
+
+        .row-2, .row-3 {
+            justify-content: space-around;
+
+            img {
+                width: 120px;
+            }
+
+            > div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .row-3 img {
+            width: 80px;
+        }
+    }
+}
+
+.yield-rewards {
+    background: url('../img/Bg-yield.jpg') center/cover no-repeat;
+    padding: 50px 0;
+
+    .yield-layout {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $tablet) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .yield {
+        flex: 0 0 50%;
+
+        &.left {
+            flex: 1 1 auto;
+            padding-top: 10px;
+            border-top: 3px solid $revv-red;
+            text-align: left;
+        }
+
+        .yield-board {
+            width: 80%;
+            margin: auto;
+            padding: 25px 30px;
+            background-color: $revv-dark-gray;
+            border-radius: 12px;
+
+            @media (max-width: $desktop) {
+                width: 100%;
+            }
+
+            .lb-row {
+                padding: 0 15px;
+            }
+
+            .rank {
+                text-align: center;
+            }
+        }
+    }
+
+    .right {
+        img {
+            width: 100%;
+        }
+    }
+}

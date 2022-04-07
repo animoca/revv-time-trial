@@ -1,0 +1,110 @@
+@import "../variables";
+// generic page level styles
+
+// Repair Centre
+#repair-center {
+    .top-panel {
+        padding: 40px 10px;
+        background: black url('../assets/img/garage/repair-banner.png') center right/ contain  no-repeat;
+        margin-bottom: 30px;
+
+        @media (max-width: $tablet) {
+            padding: 20px 10px;
+            margin-bottom: 15px;
+            background-size: 100%;
+        }
+    }
+
+    .repair-main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .repair-card {
+        margin-top: 20px;
+        padding: 25px 20px;
+        background-color: $revv-dark-gray;
+        border-radius: 6px;
+
+        @media (max-width: $tablet) {
+            padding: 15px 10px;
+        }
+
+        &:nth-child(2n) {
+            margin-left: 20px;
+        }
+
+        .garage-item {
+            width: 200px;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            align-items: center;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .arrow {
+            width: 25px;
+            height: 25px;
+            margin: 0 15px;
+            color: $revv-green;
+            font-size: 1.5625rem;
+            text-align: center;
+
+            @media (max-width: $tablet) {
+                margin: 0 5px;
+            }
+        }
+    }
+
+    .bottom-panel {
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        padding: 100px 0;
+
+        .discord {
+            margin-left: 15px;
+        }
+    }
+}
+
+.pending-modal {
+    &.repair {
+        .img-wrapper {
+            border-radius: 6px 6px 0 0;
+        }
+    }
+    .token-meta {
+        max-width: 250px;
+        margin: auto;
+        padding: 25px;
+        border-radius: 0 0 6px 6px;
+        background-color: $revv-black;
+        overflow: hidden;
+
+        p, span {
+            margin: 0;
+            text-align: center;
+        }
+
+        .tokenid {
+            width: 100%;
+            display: block;
+            color: $revv-gray;
+            font-size: .75rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            &.repaired {
+                color: $revv-green
+            }
+        }
+    }
+}

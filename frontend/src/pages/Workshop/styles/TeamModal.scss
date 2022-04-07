@@ -1,0 +1,70 @@
+@import '../../../variables';
+
+.team-modal {
+    
+    .modal-header {
+        h4 {
+            cursor: pointer;
+
+            svg {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .modal-body {
+        padding-top: 0;
+        max-height: 350px;
+        overflow-y: scroll;
+
+        .btn-wrapper {
+            margin-bottom: 15px;
+
+            .btn {
+   
+                svg {
+                    margin-right: 10px;
+                }
+            }
+
+            *+* {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .row-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 10px;
+        
+        .name-row {
+            display: flex;
+            padding: 0.75rem 0;
+            background: none;
+            border-top: none;
+            color: white;
+            border-color: $revv-gray;
+    
+            .t-name {
+                max-width: 200px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+    
+            .team-index {
+                flex: 0 0 60px;
+            }
+    
+            &.active, &:hover {
+                color: $revv-red;
+                border-color: $revv-gray;
+            }
+    
+            *+* {
+                margin-left: 15px;
+            }
+        }
+    }
+}

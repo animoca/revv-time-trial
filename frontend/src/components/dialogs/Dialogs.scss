@@ -1,0 +1,104 @@
+@import '../../variables';
+.btn-enter {
+    width: 100%;
+    margin-top: 5px;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid $revv-red;
+    background-color: $revv-red;
+    color: white;
+    text-transform: uppercase;
+}
+
+.btn-login {
+    width: 100%;
+    margin-top: 5px;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+}
+
+.btn-separate {
+    margin: 15px 0 !important;
+}
+
+.pin-input {
+    border: none !important;
+    background-color: $revv-gray !important;
+    margin: 5px;
+    width: 50px !important;
+    height: 113px !important;
+    color: white !important;
+    font-weight: 700 !important;
+    text-align: center;
+}
+
+.pin-input-group {
+    margin: 0 auto;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.hyphen-separator {
+    color: white;
+    font-weight: bold;
+    font-size: 1.875rem;
+}
+
+.left-align {
+    float: left;
+    max-width: 200px;
+}
+
+.right-align {
+    float: right;
+}
+
+.change-number {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+}
+
+.pin-input-box {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    background-color: black;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 130px 15px 15px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.dot-filled {
+    display: inline-block;
+    margin: 130px 15px 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid white;
+    background-color: white;
+}

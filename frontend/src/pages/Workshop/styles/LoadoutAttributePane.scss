@@ -1,0 +1,52 @@
+@import "../../../variables";
+
+.loadout-attribute-pane{
+    margin: 10px 0 0 auto;
+}
+
+.loadout-dial-container{
+    display: inline-block;
+    padding: 0px 4px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    overflow: visible;
+
+    .value{
+        font-size: 1.25rem;
+
+        @media (max-width: $desktop) {
+            font-size: .75rem;
+        }
+    }
+    .delta{
+        position: absolute;
+        bottom: 54px;
+        font-size: .875rem;
+
+        @media (max-width: $desktop) {
+            display: none;     
+        }
+
+        &#higher{
+            color: $revv-green;
+        }
+
+        &#lower{
+            color:$revv-red;
+        }
+    }
+
+    .text{
+        font-size: .5rem;
+        max-width: 90px;
+        white-space: nowrap;
+        margin: auto;
+        text-overflow: ellipsis;
+        overflow-x: hidden;
+
+        @media (max-width: $desktop) {
+            max-width: 45px;
+        }
+    }
+}

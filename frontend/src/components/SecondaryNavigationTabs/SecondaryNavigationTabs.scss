@@ -1,0 +1,48 @@
+@import "../../variables";
+
+.secondary-navigation-tabs {
+    .outer-title-wrapper {
+        background-color: $revv-dark-gray;
+    }
+
+    .inner-title-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        height: 62px;
+        margin-bottom: 0;
+        border: none;
+        list-style: none;
+    
+        .tab {
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            height: 100%;
+            margin-bottom: 0;
+            padding: 0.75rem 2.75rem;
+            border: solid transparent;
+            border-radius: 0;
+            border-width: 0 0 2px;
+            color: white;
+            font-family: $font-revv;
+            cursor: pointer;
+    
+            @media (max-width: $tablet) {
+                padding: 0.75rem 1rem;
+            }
+    
+            &.active {
+                color: white;
+                background-color: $revv-dark-gray;
+                border-color: $revv-red;
+            }
+        }
+    }
+}

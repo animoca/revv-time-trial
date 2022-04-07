@@ -1,0 +1,298 @@
+@import '../../../variables';
+
+.page-wrapper-bg {
+    width:100%;
+
+    .overview, .loadout-overview {
+        background: top center/cover no-repeat;
+    }
+
+    &#timetrial{
+        &.s2020 { .overview {background-image: url('../img/bg-timetrial-2020.jpg');}}
+        &.s2019 { .overview {background-image: url('../img/bg-timetrial-2019.jpg');}}
+
+        &.s2020 { .loadout-overview {background-image: url('../img/bg-timetrial-loadout-2020.jpg');}}
+        &.s2019 { .loadout-overview {background-image: url('../img/bg-timetrial-loadout-2019.jpg');}}
+    }
+}
+.overview {
+    display: flex;
+    padding: 2rem;
+    height: calc(100vh - 124px);
+    min-height: 650px;
+
+    @media (max-width: $desktop) {
+        height: auto;
+        max-height: none;
+        padding: 0;
+    }
+
+    .mobile-only {
+        display: none;
+        width: 100%;
+
+        @media (max-width: $desktop) {
+            display: block;
+        }
+    }
+
+    .track-overview {
+        flex: 1 1 auto;
+        position: relative;
+        margin-right: 1rem;
+        border-radius: 12px;
+
+        @media (max-width: $desktop) {
+            display: none;
+        }
+
+        .top {
+            display: flex;
+
+            h2 {
+                margin-bottom: 0;
+            }
+
+            .circuit-name {
+                margin-left: 15px;
+            }
+
+            .tut-btn {
+                margin-left: auto;
+            }
+        }
+    }
+
+    .track {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    
+        .track-image {
+            position: relative;
+            width: 100%;
+            height: 700px;
+
+            img {
+                display: block;
+                width: 90%;
+                margin: auto;
+            }
+
+            .render {
+                position: relative;
+                z-index: 1;
+
+                @media (min-width: 1920px) {
+                    width: 60%;
+                }
+            }
+
+            .shadow {
+                position: absolute;
+                inset: 90px auto auto 65px;
+                z-index: 0;
+                opacity: 0.5;
+
+                @media (min-width: 1920px) {
+                    width: 60%;
+                    left: calc(50% - 600px)
+                }
+            }
+        }
+
+        .overlay-content {
+            position: absolute;
+            z-index: 2;
+
+            &.weather-icon {
+                inset: 15px 15px auto auto;
+                padding: 5px 15px;
+                background-color: $revv-black;
+            }
+
+            &.top-times {
+                inset: 0 auto auto 15px;
+                z-index: 1;
+            }
+        }
+    }
+
+    .bot {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        z-index: 1;
+
+        .btns {
+            padding-right: 15px;
+        }
+
+        .standings-button {
+            margin-top: 15px;
+
+            svg {
+                margin-right: 15px;
+                color: red;
+            }
+        }
+    }
+
+    .track-details {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 350px;
+        border-radius: 12px;
+
+        @media (max-width: $desktop) {
+            display: none;
+        }
+
+        .top {
+            flex: 0 0 72px;
+            border-radius: 12px 12px 0 0;
+            padding: 10px 15px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+            padding: 25px;
+            background: transparent linear-gradient(160deg, $revv-dark-gray 0%, $revv-black 100%);
+            border-radius: 0 0 12px 12px;
+            max-height: calc(100% - 72px);
+
+            .image {
+                flex: 0 1 auto;
+                min-height: 120px;
+                text-align: center;
+
+                img {
+                    height: 100%;
+                    width: auto;
+                }
+            }
+
+            .description {
+                border: solid $revv-red;
+                border-width: 3px 3px 0 0;
+                border-top-right-radius: 10px;
+                padding: 15px 15px 15px 0;
+                margin: 20px 0;
+            }
+
+            .ctrls {
+                margin-top: auto;
+            }
+        }
+
+        fieldset.hidden {
+            display: none;
+        }
+    }
+}
+
+/* Best time */
+.best-time {
+    background: linear-gradient(158deg, #000000 0%, #050505F9 26%, #363131BF 50%, #0000007C 80%, #0000005E 100%);
+    width: 200px;
+    margin-top: 15px;
+    border-bottom-right-radius: 12px;
+
+    .pane {
+        padding: 10px;
+    }
+
+    .strap {
+        background: linear-gradient(101deg, #926C11 0%, #FFE7AE 27%, #8B6711 100%);
+        width: 100%;
+        height: 5px;
+    }
+
+    &.you {
+        width: 250px;
+
+        .strap {
+            background: $revv-red
+        }
+    }
+
+    .standing {
+        display: flex;
+        justify-content: space-between;
+
+        .name {
+            max-width: 100px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+/* Next track */
+.next-track-panel {
+    background: none;
+    padding-top: 0;
+    flex: 1 1 auto;
+    margin-right: 15px;
+
+    .tt-country {
+        display: flex;
+        align-items: center;
+    }
+    
+    .content-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+
+        @media (max-width: $desktop) {
+            align-items: flex-start;
+        }
+
+        .track-name {
+            text-transform: uppercase;
+        }
+
+        .countdown {
+            svg {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.mobile-only {
+    &.top-times {
+        padding: 0 15px;
+        margin-bottom: 20px;
+
+        .best-time {
+            width: 100%;
+        }
+    }
+
+    .next-track-panel {
+        .tt-country {
+            flex-direction: row;
+        }
+    }
+}
+
+.tutorial-modal {
+    .tutorial-switch {
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    .slide-indicators {
+        position: relative;
+    }
+}

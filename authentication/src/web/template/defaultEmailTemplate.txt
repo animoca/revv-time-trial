@@ -1,0 +1,5 @@
+Welcome to REVV Time Trial!
+
+Please click the link below to confirm that {{email}} is the correct email address.
+
+{{verificationLink}}

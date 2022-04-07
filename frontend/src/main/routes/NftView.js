@@ -1,0 +1,1 @@
+export { NftView as default } from "../../pages/Garage";

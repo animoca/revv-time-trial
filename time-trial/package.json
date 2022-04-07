@@ -1,0 +1,53 @@
+{
+  "name": "revv_time_trial",
+  "version": "1.0.0",
+  "author": "Animoca Brands",
+  "license": "MIT",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/server.js",
+    "build": "babel src --out-dir dist --copy-files",
+    "buildAndServe": "npm run build && babel-node dist/server.js",
+    "serve": "babel-node dist/server.js",
+    "stateForecast": "babel-node src/states.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.outblaze.net:formula1/backend/apis/users/backend-apis-users-time_trial.git"
+  },
+  "dependencies": {
+    "@animoca/f1dt-core_metadata": "^2.2.1",
+    "async-exit-hook": "^2.0.1",
+    "async-redis": "^1.1.7",
+    "axios": "^0.19.2",
+    "@animocabrands/backend-common_library": "file:../backend-common_library",
+    "big-integer": "^1.6.48",
+    "bits.js": "^0.1.1",
+    "config": "^3.2.4",
+    "cookie-parser": "^1.4.4",
+    "core-js": "^3.4.1",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-basic-auth": "^1.2.0",
+    "express-validator": "^6.2.0",
+    "express-winston": "^4.0.1",
+    "mongodb": "^3.3.4",
+    "nodemon": "^2.0.2",
+    "regenerator-runtime": "^0.13.3",
+    "seedrandom": "^3.0.5",
+    "serverless-http": "^2.3.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/register": "^7.8.6",
+    "@babel/compat-data": "^7.9.0"
+  }
+}

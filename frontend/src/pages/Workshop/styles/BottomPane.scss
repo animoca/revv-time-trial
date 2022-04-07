@@ -1,0 +1,102 @@
+@import "../../../variables";
+
+#workshop {
+    .bottom-pane {
+        position: relative;
+        width: 100%;
+        background-image: linear-gradient(to right,rgba(21,21,30,0.25), $revv-black);
+        border-radius: 10px;
+        font-size: 1.75rem;
+        font-weight: bold;
+        
+        @media (min-width: ($desktop + 1px)) {
+            margin-left: 26px;
+        }
+
+        @media (max-width: $desktop) {
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+            font-size: 1rem;
+        }
+
+        @media (max-width: $mini) {
+            bottom: -40px;
+        }
+    
+        .top {
+            position: absolute;
+            width: 100%;
+            padding: 12px 10px;
+            border-radius: 10px 10px 0 0;
+            background-image: linear-gradient(to right,rgba(21,21,30,0.25), $revv-black),
+             url("../../../assets/img/workshop/main-bar-pattern.png");
+    
+            .content {
+                min-height: 50px;
+
+                .title {
+                    text-transform: capitalize;
+                    line-height: 100%;
+        
+                    @media (max-width: $desktop) {
+                        max-width: 200px;
+                    }
+                }
+                
+                .details {
+                    display: inline-block;
+                    font-size: .875rem;
+        
+                    @media (max-width: $desktop) {
+                        font-size: .75rem;
+                    }
+
+                    & .season{
+                        color:red;
+                        margin-left: 4px;
+                    }
+
+                    & .rarity{
+                        margin-left: 8px;
+                        text-transform: uppercase;
+
+                        &#common{
+                            color: $revv-rarity-common;
+                        }
+
+                        &#epic{
+                            color: $revv-rarity-epic;
+                        }
+
+                        &#legendary{
+                            color: $revv-rarity-legendary;
+                        }
+
+                        &#rare{
+                            color: $revv-rarity-rare;
+                        }
+
+                        &#apex{
+                            color: $revv-rarity-apex;
+                        }
+                    }
+                }
+            }
+        }
+
+        .dials {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        &#mobile-hidden{
+            @media (max-width: $desktop) {
+                display: none;
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,105 @@
+version: '3.1'
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: user
+      MONGO_INITDB_ROOT_PASSWORD: password
+    # volumes:
+      # - ./seed-mongo.js:/docker-entrypoint-initdb.d/seed-mongo.js:ro
+
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - "6379:6379"
+  auth:
+    build: 
+      context: .
+      dockerfile: ./authentication/Dockerfile
+    image: revv-auth
+    restart: always
+    environment:
+      REDIS_URL: redis://redis:6379
+      MONGODB_URL: mongodb://user:password@mongo:27017/revv?authSource=admin
+      WAIT_HOSTS: mongo:27017, redis:6379
+    depends_on: 
+      - "mongo"
+      - "redis"
+    ports:
+      - "8081:8081"
+  wallet:
+    build: 
+      context: .
+      dockerfile: ./wallet/Dockerfile
+    image: revv-wallet
+    restart: always
+    environment:
+      CHAIN_ID: 4
+      MONGO_URI: mongodb://user:password@mongo:27017/revv?authSource=admin
+      WAIT_HOSTS: mongo:27017
+    depends_on: 
+      - "mongo"
+      - "redis"
+    ports:
+      - "8082:8082"
+  composition:
+    build: 
+      context: .
+      dockerfile: ./composition/Dockerfile
+    image: revv-composition
+    restart: always
+    environment:
+      CHAIN_ID: 4
+      REDIS_URI: redis://redis:6379
+      MONGO_URI: mongodb://user:password@mongo:27017/revv?authSource=admin
+      WAIT_HOSTS: mongo:27017, redis:6379
+    depends_on: 
+      - "mongo"
+      - "redis"
+    ports:
+      - "8083:8083"
+  time-trial:
+    build: 
+      context: .
+      dockerfile: ./time-trial/Dockerfile
+    image: revv-time_trial
+    restart: always
+    environment:
+      REDIS_URL: redis://redis:6379
+      MONGODB_URL: mongodb://user:password@mongo:27017/revv?authSource=admin
+      COMPOSITION_ENDPOINT: http://composition:8083
+      USERS_ENDPOINT: http://authentication:8081
+      WALLET_API_ENDPOINT: http://wallet:8082
+      WAIT_HOSTS: mongo:27017, redis:6379
+    depends_on: 
+      - "mongo"
+      - "redis"
+    ports:
+      - "8084:8084"
+
+  website:
+    build: 
+      context: .
+      dockerfile: ./frontend/Dockerfile
+      args:
+        REACT_APP_CHAIN_ID: 4
+        REACT_APP_DEFAULT_WEB3_PROVIDER_ID: rinkeby
+        REACT_APP_USER_API_BASE_URL: http://localhost:8081
+        REACT_APP_WALLET_API_URL: http://localhost:8082
+        REACT_APP_WORKSHOP_API_BASE_URL: http://localhost:8083
+        REACT_APP_TIMETRIAL_API_BASE_URL: http://localhost:8084
+        REACT_APP_PROVIDER_URL: /contractConfig/Provider.json
+        REACT_APP_DEPLOYMENT_CONTEXT_URL: /contractConfig/DeploymentContext.json
+        REACT_APP_VERSION: $npm_package_version
+    image: revv-website
+    restart: always    
+    depends_on:
+      - "mongo"
+      - "redis"
+    ports:
+      - "3000:80"

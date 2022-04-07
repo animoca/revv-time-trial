@@ -1,0 +1,81 @@
+.entrance-appear {
+	opacity: 0;
+    transform: translate(-100%);
+}
+.entrance-appear-active {
+	opacity: 1;
+    transform: translate(0);
+  	transition: transform .5s,
+  		opacity .5s;
+  	transition-delay: .5s;
+}
+.entrance-appear-done {
+	opacity: 1;
+    transform: translate(0);
+  	transition: transform .5s,
+  		opacity .5s;
+  	transition-delay: .5s;
+}
+
+.fade-appear {
+	opacity: 0;
+    transform: translate(-100%);
+}
+.fade-appear-active {
+	opacity: 1;
+    transform: translate(0);
+  	transition: transform 1s,
+  		opacity 0.8s;
+  	transition-delay: 1s;
+}
+.fade-appear-done {
+	opacity: 1;
+    transform: translate(0);
+  	transition: transform 1s,
+  		opacity 0.8s;
+  	transition-delay: 1s;
+}
+
+.stretch-appear {
+    flex: 1;
+    right: 0;
+}
+.stretch-appear-active {
+    flex: 12 !important;
+    transition: flex 700ms linear;
+    transition-delay: 1s;
+}
+.stretch-appear-done {
+    flex: 12 !important;
+    transition: flex 700ms linear;
+    transition-delay: 1s;
+}
+
+.fadeIn-appear {
+	opacity: 0;
+}
+.fadeIn-appear-active {
+	transition: background 2s;
+}
+.fadeIn-appear-done {
+	transition: background 2s;
+}
+
+.fadeOut-enter {
+  opacity: 1;
+}
+.fadeOut-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity 3s ease-in-out;
+  -moz-transition: opacity 3s ease-in-out;
+  -ms-transition: opacity 3s ease-in-out;
+  -o-transition: opacity 3s ease-in-out;
+}
+.fadeOut-enter-done {
+  opacity: 0;
+  -webkit-transition: opacity 3s ease-in-out;
+  -moz-transition: opacity 3s ease-in-out;
+  -ms-transition: opacity 3s ease-in-out;
+  -o-transition: opacity 3s ease-in-out;
+}
+

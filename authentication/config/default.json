@@ -1,0 +1,40 @@
+{
+    "mongodb": {
+        "url": "mongodb://user:password@localhost:27017/revv?authSource=admin",
+        "useNewUrlParser": true
+    },
+    "redis": {
+        "url": "redis://localhost"
+    },
+    "api": {
+        "access_control": [
+            {
+                "regex": "http[s]?:\/\/localhost:[0-9]{4}"
+            }
+        ]
+    },
+    "web3": {
+        "networkId": 4
+    },
+    "session": {
+        "secret": "dev",
+        "ttl": 1209600000
+    },
+    "dapper": {
+        "url": "http://localhost:8545"
+    },
+    "opensea": {
+        "enable": false,
+        "api_key": "nodefaultsetting"
+    },
+    "webpurify": {
+        "enable": true,
+        "url": "https://api1-ap.webpurify.com/services/rest/",
+        "api_key": "00000000000000000000000000000000"
+    },
+    "emailVerification": {
+        "enable": false,
+        "ttl": 1209600000,
+        "sourceEmail": "\"REVV Time Trial\" <test@gmail.com>"
+    }
+}

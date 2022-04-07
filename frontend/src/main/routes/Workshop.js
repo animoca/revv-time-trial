@@ -1,0 +1,1 @@
+export { Workshop as default } from "../../pages/Workshop";

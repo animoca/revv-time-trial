@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="172" height="58" viewBox="0 0 172 58">
+  <defs>
+    <clipPath id="clip-Img-mobiletodesktop">
+      <rect width="172" height="58"/>
+    </clipPath>
+  </defs>
+  <g id="Img-mobiletodesktop" clip-path="url(#clip-Img-mobiletodesktop)">
+    <g id="Group_3156" data-name="Group 3156" transform="translate(-113 -364)">
+      <path id="ic_desktop_mac_24px" d="M46.316,2H5.532A4.545,4.545,0,0,0,1,6.532v27.19a4.545,4.545,0,0,0,4.532,4.532H21.392l-4.532,6.8v2.266H34.987V45.051l-4.532-6.8H46.316a4.545,4.545,0,0,0,4.532-4.532V6.532A4.545,4.545,0,0,0,46.316,2Zm0,27.19H5.532V6.532H46.316Z" transform="translate(230.152 368.266)" fill="#fff"/>
+      <path id="ic_phone_android_24px" d="M29.924,1H11.8A6.788,6.788,0,0,0,5,7.8V44.051a6.788,6.788,0,0,0,6.8,6.8H29.924a6.788,6.788,0,0,0,6.8-6.8V7.8A6.788,6.788,0,0,0,29.924,1ZM25.392,46.316H16.329V44.051h9.063Zm7.364-6.8H8.965V7.8H32.756Z" transform="translate(112 367)" fill="#fff"/>
+      <g id="Group_3154" data-name="Group 3154" transform="translate(-22 -4)">
+        <rect id="Rectangle_1919" data-name="Rectangle 1919" width="23" height="7" transform="translate(195 392)" fill="#e10a17"/>
+        <path id="Polygon_30" data-name="Polygon 30" d="M12.5,0,25,11H0Z" transform="translate(229 383) rotate(90)" fill="#e10a17"/>
+      </g>
+    </g>
+  </g>
+</svg>

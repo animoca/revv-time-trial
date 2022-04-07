@@ -1,0 +1,51 @@
+@import "../../../variables";
+
+.filter-modal {
+    @media (max-width: $tablet) {
+    padding: 0;
+    margin: 0;
+    max-width: 100% !important; 
+    }
+
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .modal-title > button{
+        font-size: 20px;
+
+        &>.caret{
+            padding-right: 8px;
+        }
+    }
+
+    .button-list{
+        display: block;
+        text-align: left;
+        
+        &>button{
+            width: 100%;
+            text-align: left;
+            border-bottom: 1px solid $revv-gray;
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+            font-weight: normal;
+            text-transform: capitalize;
+
+            .caret {
+                padding-left: 8px;
+            }
+
+            &>.value{
+                float: right;
+                font-weight: bold;
+            }
+
+            &>.caret{
+                float: right;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@import '../../variables';
+
+.d-flex {
+    display: flex;
+
+    &.fd-column {
+        flex-direction: column;
+    }
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+    }
+
+    // align items
+    &.ai-center {
+        align-items: center;
+    }
+
+    &.ai-start {
+        align-items: flex-start;
+    }
+
+    &.ai-end {
+        align-items: flex-end;
+    }
+
+    // justify content
+    &.jc-space-between {
+        justify-content: space-between;
+    }
+
+    &.jc-space-around {
+        justify-content: space-around;
+    }
+
+    // align-self
+    .as-center {
+        align-self: center;
+    }
+
+    .as-start {
+        align-self: flex-start;
+    }
+
+    .as-end {
+        align-self: flex-end;
+    }
+}

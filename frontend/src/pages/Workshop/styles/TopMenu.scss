@@ -1,0 +1,223 @@
+@import "../../../variables";
+
+#workshop {
+    
+    .top-menu{
+        height: 50px;
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: black;
+        font-weight: bold;
+        text-align: left;
+        text-transform: uppercase;
+    
+        @media (max-width: $desktop) {
+            max-width: 100%;
+        }
+        @media (min-width: ($desktop + 1px)) {
+            margin-top: 26px;
+        }
+
+        >div {
+
+            @media (max-width: $mobile) {
+                flex: 1;
+                
+                &:not(.dropdown) {
+                    flex: 2;
+                }
+            }
+        }
+    
+        .divider{
+            width: 4px;
+            height: 100%;
+            background-color: $revv-red;
+        }
+        a {
+    
+            &:hover, &:active{
+                color: $revv-red;
+            }
+        }
+    
+        span.caret{
+            margin-left: 24px;
+            @media (max-width: $desktop) {
+                display: none;
+            }
+            
+            &#team-caret{
+                @media (max-width: $desktop) {
+                    display: initial;
+                    margin-left: 4px;
+                }
+            }
+        }
+        
+        .section {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            flex-shrink: 0;
+            margin: 0;
+            background: right/auto no-repeat, right/auto no-repeat, right/auto no-repeat, right/14px repeat;
+            
+            @media (max-width: $desktop) {
+                width: auto;
+                padding-right: 50px;
+            }
+
+            @media (max-width: 375px) {
+                width: 140px;
+            }
+    
+            &#closed {
+                width: 200px;
+                padding-right: 0px;
+
+                @media (max-width: 375px) {
+                    width: 140px;
+                }
+    
+                @media (max-width: $tiny) {
+                    padding-right: 10px;
+                }
+            }
+    
+            &#open {
+                padding-right: 100px;
+            }
+        }
+        
+    
+        .dropdown-toggle::after{
+            display: none;
+        }
+    
+        .dropdown .top-menu-dropdown-button,
+        .dropdown .top-menu-dropdown-button:active,
+        .dropdown .top-menu-dropdown-button:focus,
+        .dropdown .top-menu-dropdown-button:not(:disabled){
+            height: 50px;
+            padding: 0 32px;
+            border: unset;
+            border-radius: 0px;
+            background-color: rgb(30,30,30);
+            font-family: $font-revv;
+    
+            @media (max-width: $desktop) {
+                padding: 0 12px;
+                font-size: .75rem;
+                text-align: left;
+            }
+    
+            &:hover {
+                color: $revv-red;
+            }
+        }
+    
+        button {
+            @media (max-width: $desktop) {
+                .btn-text {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+    
+                .o-ellipsis {
+                    max-width: 90px;
+                }
+            }
+        }
+    }
+
+    .subcategory-menu{
+
+        .top-menu-item{
+            float: left;
+            margin: 8px;
+            text-align: center;
+    
+            @media (max-width: $desktop) {
+                margin: 6px 4px;
+            }
+
+            img{
+                max-width: 50px;
+
+                @media (max-width: $desktop) {
+                    max-width: 40px;
+                }
+                @media (max-width: 320px) {
+                    max-width: 30px;
+                }
+            }
+    
+            .item-rarity-strip{
+                background-color: transparent;
+                height: 2px;
+
+                &#common {
+                    background-color: $revv-rarity-common;
+                }
+
+                &#epic {
+                    background-color: $revv-rarity-epic;
+                }
+
+                &#legendary {
+                    background-color: $revv-rarity-legendary;
+                }
+
+                &#rare {
+                    background-color: $revv-rarity-rare;
+                }
+
+                &#apex {
+                    background-color: $revv-rarity-apex;
+                }
+            }
+            
+            .top-menu-item-image#selected{
+                transform: scale(1.5);
+            }
+        }
+        
+        &#inline{
+            display:flex;
+            flex-wrap: nowrap;
+
+            @media (max-width: $desktop) {
+                display: none;
+            }
+        }
+
+        &#mobile{
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    }
+
+    .top-menu-subcategory{
+        display: none;
+        position: relative;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: auto;
+        align-items: center;
+        background-color: black;
+        text-transform: uppercase;
+
+        @media (max-width: $desktop) {
+            display: inline-flex;
+        }
+    }
+
+
+}
+
+
+

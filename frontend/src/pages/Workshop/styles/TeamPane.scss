@@ -1,0 +1,127 @@
+@import "../../../variables";
+
+#workshop
+.col#team-pane{
+    width: 300px;
+    flex-grow: 0;
+
+    @media (max-width: $desktop) {
+        display: none;
+    }
+
+    .team-pane{
+        width: 285px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        text-align: center;
+        background-image: linear-gradient(127deg,rgba(21,21,30,0.25), rgba(67,67,84,100));
+        border-radius: 10px;
+    
+        @media (min-width: ($desktop + 1px)) {
+            margin-left: 26px;
+        }
+        
+        .top{
+            padding: 10px;
+            background-image: linear-gradient(to left,rgba(21,21,30,0.25), rgba(67,67,84,100));
+            border-radius: 10px 10px 0 0;
+            font-size: 1.125rem;
+            
+            .score{
+                font: bolder 2.25rem/24px $font-titillium;
+                padding: 10px;
+            }
+        }
+    
+        .contents{
+            padding-top: 10px;
+            background-image: linear-gradient(to bottom,rgba(21,21,30,0.25),rgba(67,67,84,100));
+            border-radius: 0 0 10px 10px;
+
+            .buttons{
+
+                button{
+                    position: relative;
+                    width: 100%;
+                    padding: 0 30px;
+                    background: none center/contain no-repeat;
+                    border: unset;
+                    color: white;
+                    font-family: $font-revv;
+                    text-align: left;
+                    text-transform: none;
+
+                    .text{
+                        padding: 30px 0px;
+
+                        .play{
+                            color: $revv-green;
+
+                            svg{
+                                margin-left: 4px;
+                            }
+                        }
+                    }
+
+                    &:disabled {
+                        opacity: 0.8;
+                    }
+                }
+    
+    
+            }
+
+            .items{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+
+                .item-tile{
+                    position: relative;
+                    width: 90px;
+                    height: 90px;
+                    background-color: white;
+                    border-radius: 6px;
+                    cursor: pointer;
+    
+                    .check{
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+
+                        &#ready {
+                            color: $revv-green;
+                        }
+
+                        &#not-ready {
+                            color: $revv-red;
+                        }
+                    }
+                    
+                    img{
+                        position: absolute;
+                        inset: 50% auto auto 50%;
+                        border-radius: 6px;
+                        max-width: 90px;
+                        max-height: 90px;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+            .ready-text{
+                font: bolder .75rem/24px $font-revv;
+
+                &#ready {
+                    color: $revv-green;
+                }
+
+                &#not-ready {
+                    color: $revv-red;
+                }
+            }
+        }
+    
+    }
+}
+

@@ -1,0 +1,31 @@
+{
+  "mongodb": {
+    "url": "mongodb://user:password@localhost:27017/revv?authSource=admin"
+  },
+  "redis": {
+    "url": "redis://localhost"
+  },
+  "api": {
+    "access_control": [
+      {
+        "regex": "http[s]?:\/\/localhost:[0-9]{4}"
+      }
+    ]
+  },
+  "session": {
+    "secret": "dev",
+    "ttl": 1209600000
+  },
+  "compositionEndpoint": "http://localhost:8083",
+  "usersEndpoint": "http://localhost:8081",
+  "walletApiEndpoint": "http://localhost:8082",
+  "stateOffsetInDays": 0,
+  "reportApiUserCredentials": {"admin":"password"},
+  "reportApiDefaultLeaderboardLimit":3,
+  "reportApiLeaderboardMaxLimit":100,
+  "revvPoolDefaultAmount":5000,
+  "sharedAttemptsBetweenSeasons":true,
+  "poolRewardRatios":{"current":0.7,"next":0.3},
+  "attemptPrice":10,
+  "revvPoolFixedAmount":null
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @media screen and (min-width: 601px) {
+        .container {
+          height: 720px;
+        }
+        .box div {
+          font-size: 0.9em;
+        }
+
+        .textheader {
+          font-size: 1.2em;
+        }
+        .subtext {
+          font-size: 0.8em;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .container {
+          height: 560px;
+        }
+        .box div {
+          font-size: 1.4em;
+        }
+        .textheader {
+          font-size: 1.6em;
+        }
+        .subtext {
+          font-size: 1.2em;
+        }
+      }
+
+      html {
+        height: 100%;
+        color: #fff;
+      }
+
+      img {
+        display: block;
+      }
+      
+      body {
+        background: #15151E;
+        margin: 0px;
+      }
+
+      .container {
+        background: #15151E;
+        width: 100%;
+      }
+
+      .box {
+        background: #2C2C34;
+        width: 400px;
+        border-radius: 25px;
+        padding: 24px;
+        text-align: left;
+      }
+
+      .box div {
+        font-family: 'lato', 'arial' , 'Verdana', 'Sans-serif';
+        margin-left: 24px; 
+        width: 80%;
+      }
+
+      .textheader {
+        font-family: 'arial' , 'Sans-serif';
+        font-weight: bold;
+        color: #fff;
+      }
+
+      p {
+        margin-top: 10px;
+        color: #999;
+      }
+
+      .logo {
+        padding: 50px 0px 30px 0px;
+        text-align: center;
+        width: 260px;
+        margin: auto auto;
+      }
+
+      .divider {
+        margin: 40px 24px 24px 24px; 
+        border-bottom: #666 solid 2px;
+      }
+
+      .subtext {
+        color: #666;
+      }
+
+      .box div .verify {
+        display: block;
+        background-color: #E10600;
+        border: 0px solid;
+        border-radius: 6px;
+        padding: 20px;
+        text-align: center;
+        margin: auto auto;
+        color: #fff;
+        width: 180px;
+        margin: 24px auto;
+      }
+
+      .verifya {
+        display: inline;
+        text-decoration: none;
+      }
+
+    </style>
+  </head>
+  <body>
+      <table cellspacing="0" cellpadding="24" border="0" class="container">
+          <tbody>
+          <tr>
+            <td align="center" valign="middle" style="margin: 30% 30%;">
+              <div class="box">
+                <img src="https://revvmotorsport.com/static/media/icon-revv.0cfea70c.png" class="logo"/>
+                <div> 
+                  <p class="textheader">Please verify your email address</p>
+                  <p>Welcome to REVV Time Trial!</p>
+                  <p>Please click the button below to confirm that {{email}} is the correct email address.</p>
+                  <a href="{{{verificationLink}}}" target="_blank" class="verifya">
+                  <div class="verify" style="margin-left: 0px;">
+                    VERIFY EMAIL
+                  </div>
+                  </a>
+                  <p>Team REVV Time Trial</p>
+                  <p class="subtext">Join the official REVV Time Trial <a href="https://discordapp.com/invite/dFBprfN" style="color: #999;">Discord</a> channel to stay up-to-date with the latest news.</p>
+                </div>
+                <p class="divider"> </p>
+                <div>
+                    <p style="text-align: center;" class="subtext">Animoca Brands</p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+      </table>
+  </body>
+</html>

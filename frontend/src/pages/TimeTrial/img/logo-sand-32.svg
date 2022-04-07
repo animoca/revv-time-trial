@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff901"/>
+      <stop offset="1" stop-color="#fcd003"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y1="1" y2="0" xlink:href="#linear-gradient"/>
+    <clipPath id="clip-logo-sand-32">
+      <rect width="32" height="32"/>
+    </clipPath>
+  </defs>
+  <g id="logo-sand-32" clip-path="url(#clip-logo-sand-32)">
+    <g id="sand-logo-circle">
+      <circle id="Ellipse_28" data-name="Ellipse 28" cx="16" cy="16" r="16" fill="#d6a200"/>
+      <circle id="Ellipse_29" data-name="Ellipse 29" cx="16" cy="16" r="16" fill="#d6a200"/>
+      <circle id="Ellipse_30" data-name="Ellipse 30" cx="15.31" cy="15.31" r="15.31" transform="translate(0.356 0.356)" fill="url(#linear-gradient)"/>
+      <circle id="Ellipse_31" data-name="Ellipse 31" cx="13.53" cy="13.53" r="13.53" transform="translate(2.492 2.492)" fill="#ebb200"/>
+      <circle id="Ellipse_32" data-name="Ellipse 32" cx="12.818" cy="12.818" r="12.818" transform="translate(2.848 2.848)" fill="url(#linear-gradient-2)"/>
+      <g id="Group_3246" data-name="Group 3246" transform="translate(7.634 7.014)">
+        <path id="Path_2985" data-name="Path 2985" d="M323.465,60.6l8.288-3.881,8.288,3.881-7.883,6.742Z" transform="translate(-323.465 -56.716)" fill="#fdff03"/>
+        <path id="Path_2986" data-name="Path 2986" d="M331.753,93.312v-9.7l-8.288-4.269v9.313Z" transform="translate(-323.465 -75.461)" fill="#cb8b03"/>
+        <path id="Path_2987" data-name="Path 2987" d="M370.978,83.611l8.288-4.269v9.314l-8.288,4.657Z" transform="translate(-362.69 -75.461)" fill="#eeb902"/>
+      </g>
+    </g>
+  </g>
+</svg>

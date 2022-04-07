@@ -1,0 +1,123 @@
+@import '../../variables';
+.stat-progress-dial {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    background: none;
+
+    @media (max-width: $mobile) {
+        width: 45px;
+        height: 45px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0 auto auto 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 2px solid $revv-gray;
+    }
+
+    & > span {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    & > span#shine {
+        overflow: visible;
+    }
+
+    .progress-left {
+        left: 0;
+
+        .progress-bar {
+            left: 100%;
+            border-left: 0;
+            border-radius: 0 60px 60px 0;
+            -webkit-transform-origin: center left;
+            transform-origin: center left;
+        }
+    }
+
+    .progress-right {
+        right: 0;
+
+        .progress-bar {
+            left: -100%;
+            border-right: 0;
+            border-radius: 60px 0 0 60px;
+            -webkit-transform-origin: center right;
+            transform-origin: center right;
+        }
+    }
+
+    .progress-bar {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid;
+        border-color: red !important;
+        background: none;
+
+        &#shine {
+            border-color:transparent !important;
+        }
+
+        &#higher {
+            border-color:green !important;
+        }
+
+        &#lower {
+            border-color:rgb(232,149,160) !important;
+        }
+    }
+
+    .progress-value {
+        position: absolute;
+        inset: 0 auto auto 0;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        svg {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.shine-right{
+    position: absolute;
+    inset: 0 auto auto 100%;
+    z-index: 2;
+    transform:  translateX(-50%) translateY(-50%)  rotate(90deg) scale(0.75);
+    overflow: visible;
+
+    &#default, &#small {
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+}
+
+.shine-left{
+    position: absolute;
+    inset: 100% auto auto 0;
+    z-index: 2;
+    transform:  translateX(-50%) translateY(-50%) rotate(90deg) scale(0.75);
+    overflow: visible;
+
+    &#default, &#small {
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+}

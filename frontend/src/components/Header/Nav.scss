@@ -1,0 +1,299 @@
+@import '../../variables';
+#main-nav {
+    color: white;
+    background-color: black;
+    height: 62px;
+    padding-right: 1rem !important; /* override bootstrap modal */
+    z-index: 920; /* override to be below modal backdrop */
+
+    @media (max-width: ($high-def - 1px)) {
+        padding: 0.5rem 1rem;
+    }
+
+    .mobile-only {
+        display: none;
+
+        @media (max-width: ($high-def - 1px)) {
+            display: block;
+        }
+    
+        &>.connect {
+            padding: 0.5rem 1.25rem;
+            
+            .smaller-font {
+                font-size: .875rem;
+            }
+        }
+    }
+
+    #nav-right {
+        align-items: center;
+
+        .connect {
+            line-height: 20px;
+            padding: 0.3125rem 0.75rem;
+            
+            &>.fa-link {
+                width: 14px;
+            }
+            
+            .smaller-font {
+                font-size: .75rem;
+            }
+        }
+
+        .btn {
+            margin-left: 10px;
+        }
+
+        #rev {
+            @media (max-width: ($high-def - 1px)) {
+                display: none;
+            }
+        }
+    }
+
+    #rev {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 30px;
+        min-width: 80px;
+        max-width: 135px;
+        border-radius: 15px;
+        padding: 5px 15px 5px 5px;
+        background-color: $tt-white;
+        color: black;
+        font-family: $font-titillium;
+
+        @media (max-width: ($high-def - 1px)) {
+            margin-bottom: 10px;
+        }
+
+        img {
+            flex: 0 0 20px;
+            max-height: 20px;
+            margin-right: 5px;
+        }
+    }
+
+    .navbar-nav .btn-revv {
+        max-width: 200px;
+
+        &.connected {
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}
+
+#second-nav {
+    background-color: $revv-dark-gray;
+
+    .nav-link {
+        margin-right: 20px;
+        padding-bottom: 1rem;
+        border-radius: 0;
+        border: solid transparent;
+        border-width: 0 0 2px;
+
+        @media (max-width: ($high-def - 1px)) {
+            border: solid $revv-dark-gray;
+            border-width: 0 1px 1px 0;
+        }
+
+        &:hover {
+            border-color: white;
+            color: white;
+
+            &:not(.active) {
+                @media (max-width: ($high-def - 1px)) {
+                    border: none;
+                }
+            }
+        }
+
+        &.active {
+            border-color: $revv-red;
+        }
+    }
+
+    #secondary-nav-container {
+        display: flex;
+        align-items: flex-end;
+
+        @media (max-width: ($high-def - 1px)) {
+            padding: 0;
+        }
+
+        .coming-soon {
+            display: block;
+        }
+    }
+
+    .container {
+        @media (max-width: ($high-def - 1px)) {
+            flex-direction: column;
+            max-width: none;
+            padding: 0;
+        }
+    }
+}
+
+#navbar-menu {
+    @media (max-width: ($high-def - 1px)) {
+        background-color: $revv-black;
+        position: fixed;
+        inset: 62px 0 0;
+        overflow: hidden auto;
+    }
+
+    .navbar-nav {
+        text-align: left;
+        align-items: center;
+
+        @media (max-width: ($high-def - 1px)) {
+            align-items: flex-start;
+            padding: 15px 20px;
+        }
+
+        .btn-revv .nav-link {
+            padding: 0;
+            color: white;
+        }
+    }
+
+    .nav-links .nav-link {
+        color: white;
+        padding: 10px 20px;
+        border-bottom-right-radius: 16px;
+
+        @media (max-width: ($high-def - 1px)) {
+            display: block;
+            width: 100%;
+            font-size: 1.125rem;
+            line-height: 24px;
+            margin: 0 0 5px;
+        }
+
+        &.disabled {
+            color: rgba(255, 255, 255, 0.45);
+            padding-top: 0;
+
+            @media (max-width: ($high-def - 1px)) {
+                padding-top: 10px;
+            }
+
+            .coming-soon {
+                margin-bottom: -4px;
+            }
+        }
+
+        .top-label {
+            margin-bottom: -4px;
+            color: $revv-red;
+            font-size: .625rem;
+            line-height: 12px;
+        }
+
+        &.promote, &.beta {
+            padding-top: 2px;
+        }
+    }
+
+    .btn svg {
+        float: left;
+        margin-top: 4px;
+    }
+
+    .nav-link {
+        border: solid black;
+        border-width: 0 1px 1px 0;
+
+        @media (max-width: ($high-def - 1px)) {
+            border-color: $revv-black;
+        }
+
+        &.active {
+            border-color: $revv-red;
+        }
+
+        &:hover {
+            border-color: white;
+        }
+
+        &.disabled {
+            border: none;
+        }
+    }
+
+    #second-nav {
+        @media (max-width: ($high-def - 1px)) {
+            padding: 15px 20px;
+        }
+    }
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-links .keep-right {
+    margin-left: auto;
+    padding: 10px 0;
+}
+
+.profile-logout-btn {
+    text-transform: uppercase;
+}
+
+#wechat-follow .img-wrapper {
+    margin: 15px 0;
+
+    img {
+        width: 100%;
+    }
+}
+
+#follow-us {
+    a:hover {
+        cursor: pointer;
+    }
+
+    @media (max-width: 1440px) {
+        display: none;
+        
+    }
+}
+
+.nav-links .nav-link .link-text {
+    @media (max-width: ($high-def - 1px)) {
+        padding: 10px 10px 10px 0;
+    }
+}
+
+.desktop-only {
+    @media (max-width: ($high-def - 1px)) {
+        display: none;
+    }
+}
+
+.nav.desktop-only {
+    @media (max-width: ($high-def - 1px)) {
+        display: none;
+    }
+}
+
+#network-alert {
+    position: sticky;
+    top: 62px;
+    z-index: 420;
+    padding: 5px 0;
+    border-color: #ffeeba;
+    background-color: #fff3cd;
+    color: #856404;
+    font-weight: bold;
+    font-family: $font-titillium;
+}

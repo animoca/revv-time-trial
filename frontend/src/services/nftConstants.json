@@ -1,0 +1,117 @@
+{
+    "MMTPropertiesLayout" : [      
+        { "name": "counter", "bits": 48 },
+        { "name": "special2", "bits": 8 },
+        { "name": "special1", "bits": 8 },
+        { "name": "effect", "bits": 8 },
+        { "name": "luck", "bits": 16 },
+        { "name": "stat3", "bits": 16 },
+        { "name": "stat2", "bits": 16 },
+        { "name": "stat1", "bits": 16 },
+        { "name": "driverNumber", "bits": 16 },
+        { "name": "label", "bits": 16 },
+        { "name": "track", "bits": 8 },
+        { "name": "rarity", "bits": 8 },
+        { "name": "team", "bits": 8 },
+        { "name": "model", "bits": 8 },
+        { "name": "padding2", "bits": 24 },
+        { "name": "season", "bits": 8 },
+        { "name": "subType", "bits": 8 },
+        { "name": "type", "bits": 8 },
+        { "name": "padding1", "bits": 7 },
+        { "name": "flag", "bits" : 1}
+    ],
+
+    "RacingAttributeFieldNames" : {
+        "topSpeed" : "Top Speed",
+        "acceleration" : "Acceleration",
+        "grip" : "Grip",
+        "stamina" : "Stamina",
+        "concentration" : "Concentration",
+        "aggression" : "Aggression",
+        "luck" : "Luck"
+    },
+    "RacingAttributeFields" : {
+        "car" : ["topSpeed", "acceleration", "grip", "luck"],
+        "part" : ["topSpeed", "acceleration", "grip", "luck"],
+        "driver" : ["stamina", "aggression", "concentration", "luck"],
+        "gear" : ["stamina", "aggression", "concentration", "luck"],
+        "tyres" : ["topSpeed", "acceleration", "grip", "luck"]
+    },
+
+    
+
+    "Seasons" : {
+        "1": "2018",
+        "2": "2019",
+        "3": "2020"
+    },
+
+    "TokenTypeIds" : {
+        "0":"none",
+        "1":"car",
+        "2":"driver",
+        "3":"part",
+        "4":"gear",
+        "5":"tyres"
+    },
+    
+    "ItemsPerGalleryPage" : 11,
+
+    "TokenSubTypeIds" : {
+        "car": {
+            "0" : "none"
+        },
+        "driver": {
+            "0" : "none"
+        },
+        "part": {
+            "0":"none",
+            "1":"powerunit",
+            "2":"turbocharger",
+            "3":"frontwing",
+            "4":"rearwing",
+            "5":"energystore",
+            "6":"brakes",
+            "7":"transmission",
+            "8":"suspension"
+        },
+        "gear": {
+            "0":"none",
+            "1":"gloves",
+            "2":"suit",
+            "3":"helmet",
+            "4":"boots"
+        },
+        "tyres": {
+            "0":"none",
+            "1":"soft",
+            "2":"medium",
+            "3":"hard",
+            "4":"intermediate",
+            "5":"wet"
+        }
+    },
+
+    "Collections" : {
+        "0":"None",
+        "1":"Prime",
+        "2":"REVV 2019",
+        "3":"TBC",
+        "4":"Infinity",
+        "5":"Meow",
+        "6":"First Edition"
+    },
+    "Rarities": {
+        "0":"apex",
+        "1":"legendary",
+        "2":"epic",
+        "3":"epic",
+        "4":"rare",
+        "5":"rare",
+        "6":"rare",
+        "7":"common",
+        "8":"common",
+        "9":"common"
+    }
+}

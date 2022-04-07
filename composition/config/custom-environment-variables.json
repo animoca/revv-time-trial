@@ -1,0 +1,18 @@
+{
+    "mongodb": {
+        "url": "MONGO_URI"
+    },
+    "redis": {
+        "url": "REDIS_URI"
+    },
+    "api": {
+        "access_control": {
+            "__name": "CORS_ALLOWED_ORIGINS",
+            "__format": "json"
+        }
+    },
+    "session": {
+        "secret": "AUTHENTICATION_SESSION_SECRET"
+    },
+    "contractAddress": "CONTRACT_ADDRESS"
+}

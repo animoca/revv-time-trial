@@ -1,0 +1,84 @@
+@import "../../../variables";
+
+.attribute-pane {
+    font-weight: bold;
+    text-transform: capitalize;
+    max-width: 300px;
+    
+    @media (max-width: $desktop) {
+        display: none;
+    }
+
+    .progress-bars {
+        width: 200px;
+    }
+
+    .item-change-indicator {
+        display: flex;
+        z-index: 1;
+        padding-top: 10px;
+        align-items: center;
+
+        img {
+            max-height: 75px;
+        }
+
+        .item-tile {
+            width: 75px;
+            background-color: transparent;
+            border: none;
+
+            img {
+                position: absolute;
+                inset: 50% auto auto 50%;
+                transform: translate(-50%,-50%);
+                z-index: 2;
+                max-width: 75px;
+
+                &#glow{
+                    z-index: 1;
+                }
+            }
+
+        }
+    }
+
+    .details {
+        display: inline-block;
+        width: 100%;
+        padding-bottom: 4px;
+        text-align: left;
+
+        .label {
+            font-size: 1.5rem;
+            padding-bottom: 4px;
+        }
+
+        .season{
+            color: red;
+            margin-left: 8px;
+        }
+
+        .rarity{
+            margin-left: 16px;
+            text-transform: uppercase;
+
+            &#common{
+                color: $revv-rarity-common;
+            }
+            &#epic{
+                color: $revv-rarity-epic;
+            }
+            &#legendary{
+                color: $revv-rarity-legendary;
+            }
+            &#rare{
+                color: $revv-rarity-rare;
+            }
+            &#apex{
+                color: $revv-rarity-apex;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,205 @@
+@import "../../variables";
+
+/* Buttons */
+
+/* General overrides */
+button, .btn {
+    font-family: $font-titillium;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn.btn-lg {
+    padding: 0.75rem 3.5rem;
+}
+
+.btn.btn-sm {
+    padding: 0.375rem 0.75rem;
+    font-size: inherit;
+}
+
+.btn.icon > span {
+    margin-left: 10px;
+}
+
+.popover[role="tooltip"] {
+    z-index: 860;
+}
+
+/* revv */
+.btn-revv {
+    color: white;
+    background-color: $revv-red;
+    padding: 0.5rem 2rem;
+}
+
+.btn-revv.disabled,
+.btn-revv:disabled {
+    background-color: $revv-gray;
+    color: white;
+    pointer-events: none;
+}
+
+.btn-revv:not(:disabled):not(.disabled):hover, 
+.btn-revv:not(:disabled):not(.disabled):active {
+    background-color: white;
+    color: $revv-red;
+}
+
+/* revv-light */
+.btn-revv-light {
+    color: $revv-red;
+    background-color: white;
+    padding: 0.5rem 2rem;
+
+    &:disabled {
+        pointer-events: none;
+    }
+}
+
+.btn-revv-light:not(:disabled):not(.disabled):hover {
+    color: white;
+    background-color: $revv-red;
+}
+
+/* revv-secondary */
+.btn-revv-secondary {
+    background-color: $revv-gray;
+    color: white;
+    padding: 0.5rem 2rem;
+}
+
+.btn-revv-secondary:hover {
+    background-color: darken($revv-gray, 10%);
+    color: white;
+}
+
+/* outline-partial-revv */
+.btn-outline-partial-revv {
+    color: white;
+}
+
+.btn-outline-partial-revv:hover, .btn-outline-partial-revv.hover {
+    color: white;
+    border-color: $revv-red;
+}
+
+/* outline-revv */
+.btn-outline-revv {
+    color: white;
+    border: 1px solid $revv-red;
+}
+
+.btn-outline-revv:hover {
+    color: white;
+}
+
+.btn-outline-revv:not(:disabled):not(.disabled):hover,
+.btn-outline-revv:not(:disabled):not(.disabled).hover {
+    color: $revv-red;
+    border-color: white;
+}
+
+.btn-outline-revv:focus,
+.btn-outline-revv:active {
+    border: 1px solid $revv-red;
+}
+
+.btn-outline-revv:not(:disabled):not(.disabled):focus, 
+.btn-outline-revv:not(:disabled):not(.disabled).focus {
+    color: white;
+    border: 1px 
+    solid $revv-red;
+}
+
+.btn-outline-red-revv {
+    color: red;
+    border: 1px solid $revv-red;
+    font-family: $font-revv;
+}
+
+/* composition section */
+.btn-revv-composition-section {
+    text-align: left;
+    font-family: $font-revv;
+    font-weight: bolder;
+    padding: 0.75rem 2rem 0.75em 1rem;
+    color: white;
+    background-color: transparent;
+    border: none;
+    @media (max-width: $mobile) {
+        font-size: 12px;
+        padding: 0 1rem;
+    }
+}
+
+.btn-revv-composition-section#closed {
+    width: 200px;
+    @media (max-width: $mobile) {
+        width: auto;
+    }
+}
+
+.btn-revv-composition-section.disabled,
+.btn-revv-composition-section:disabled {
+    background-color: transparent;
+    color: white;
+    border: none;
+    pointer-events: none;
+}
+
+.btn-revv-composition-section:not(:disabled):not(.disabled):hover {
+    background-color: transparent;
+    border: none;
+    color: $revv-red;
+}
+/* anchor */
+.btn-anchor {
+    font: 600 18px/26px $font-titillium;
+    color: $revv-red;
+    border: none;
+}
+
+.btn-anchor:not(:disabled):not(.disabled):hover {
+    color: black;
+}
+
+/* transparent button */
+.btn-revv-transparent {
+    font-size:16px;
+    border:0;
+    border-radius: 0;
+    color: white;
+    background-color: transparent;
+}
+.btn-revv-transparent:not(:disabled):not(.disabled):hover,
+.btn-revv-transparent:focus{
+    color: $revv-red;
+}
+
+/* dropdown button */
+.btn-revv-composition {
+    font-size: 1rem;
+    color: white;
+    border: 1px solid white;
+    border-radius: 100px;
+}
+.btn-revv-composition:hover,
+.btn-revv-composition:focus{
+    color: $revv-red;
+}
+
+#workshop .filter-menu-dropdown .dropdown a {
+    color: white;
+    background-color: red;
+    padding-top:4px;
+}
+#workshop .filter-menu-dropdown .dropdown a:hover, .dropdown a.hover {
+    color: $revv-red;
+    border: 1px solid white;
+}
+
+#workshop .filter-menu-dropdown .dropdown a:focus, .dropdown a.focus {
+    color: $revv-red;
+    border: 1px solid white;
+}

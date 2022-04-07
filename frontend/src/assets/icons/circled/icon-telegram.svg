@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <clipPath id="clip-Icon-telegram">
+      <rect width="48" height="48"/>
+    </clipPath>
+  </defs>
+  <g id="Icon-telegram" clip-path="url(#clip-Icon-telegram)">
+    <g id="Group_5384" data-name="Group 5384" transform="translate(0 0.11)">
+      <circle id="Ellipse_11" data-name="Ellipse 11" cx="24" cy="24" r="24"/>
+      <g id="Telegram" transform="translate(11.94 14.314)">
+        <g id="Telegram-2" data-name="Telegram" transform="translate(0 0)">
+          <path id="Shape" d="M16.65,19.039a.537.537,0,0,1-.329-.114l-4.8-3.678a.761.761,0,0,0-.466-.16.771.771,0,0,0-.5.188L7.886,17.565a.537.537,0,0,1-.355.134.565.565,0,0,1-.538-.418L5.144,11.01.366,9.129A.606.606,0,0,1,.361,8.018L19.968.041a.538.538,0,0,1,.2-.041A.551.551,0,0,1,20.6.207a.611.611,0,0,1,.125.509L17.2,18.566A.574.574,0,0,1,16.65,19.039ZM16.119,3.916a.159.159,0,0,0-.087.027L6.695,10.009a1.02,1.02,0,0,0-.411,1.115l1.009,3.741a.238.238,0,0,0,.231.185.241.241,0,0,0,.24-.221l.263-2.052a1.718,1.718,0,0,1,.5-1.008l7.705-7.554a.17.17,0,0,0,.041-.191A.168.168,0,0,0,16.119,3.916Z" fill="#fff"/>
+          <path id="Shape-2" data-name="Shape" d="M.447,6.092,9.784.027c.168-.109.34.131.2.272L2.274,7.853a1.717,1.717,0,0,0-.5,1.008l-.262,2.052a.239.239,0,0,1-.471.036L.036,7.208A1.017,1.017,0,0,1,.447,6.092Z" transform="translate(6.248 3.916)" fill="#eaeaea"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

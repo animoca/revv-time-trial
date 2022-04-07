@@ -1,0 +1,82 @@
+@import '../../../variables';
+
+.tabbed-current-pool.secondary-navigation-tabs {
+    .inner-title-wrapper {
+        overflow: auto;
+
+        .current-pool-tab-title {
+            margin: 0 0 0 auto;
+            cursor: default;
+            
+            .wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+
+                @media (max-width: $desktop) {
+                    flex-direction: column;
+                }
+            }
+
+            .label {
+                font-size: 0.8rem;
+            }
+
+            .current-pool {
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                height: 28px;
+                margin: 0 0 0 18px;
+                border-radius: 16px;
+                background-color: black;
+                color: black;
+
+                @media (max-width: $desktop) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    .season {
+        opacity: 0.5;
+        display: flex;
+        align-items: center;
+        min-width: 80px;
+        padding: 16px;
+        border-radius: 16px;
+        color: white;
+        font-weight: bold;
+        font-family: $font-titillium;
+
+        @media (max-width: $desktop) {
+            display: none;
+        }
+
+        &.active {
+            opacity: 1.0;
+            background-color: $tt-white;
+            height: 34px;
+            color: black;
+
+            @media (max-width: $desktop) {
+                display: flex;
+                padding: 12px;
+                height: 26px;
+            }
+        }
+
+        .pool-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .revv-img {
+            max-height: 24px;
+            margin-right: 6px;
+            flex: 0 0 20px;
+        }
+    }
+}

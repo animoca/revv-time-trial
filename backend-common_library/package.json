@@ -1,0 +1,48 @@
+{
+  "name": "@animocabrands/backend-common_library",
+  "version": "1.1.4",
+  "main": "dist/index.js",
+  "repository": "git@gitlab.outblaze.net:formula1/backend/backend-common_library.git",
+  "author": "Animoca Brands",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon --exec npm run build",
+    "tsc-build": "tsc && rsync -a --prune-empty-dirs --include '*/' --include '*.d.ts' --exclude '*' build/ dist/",
+    "build": "babel src --out-dir dist --source-maps inline --copy-files && npm run tsc-build",
+    "prepack": "npm test && npm run build",
+    "test": "mocha --require babel-hook --require @babel/polyfill ./test/**/*.test.js",
+    "testServer": "nodemon --exec babel-node test/testServer.js"
+  },
+  "dependencies": {
+    "async-exit-hook": "^2.0.1",
+    "async-redis": "^1.1.7",
+    "config": "^3.2.4",
+    "core-js": "^3.4.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.2.0",
+    "express-winston": "^4.0.1",
+    "mongodb": "^3.3.4",
+    "pg": "^8.5.1",
+    "regenerator-runtime": "^0.13.3",
+    "serverless-http": "^2.3.0",
+    "web3-utils": "1.0.0-beta.55",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.0",
+    "@types/node": "^12.12.11",
+    "chai": "^4.2.0",
+    "cross-fetch": "^3.0.4",
+    "ganache-cli": "^6.7.0",
+    "mocha": "^6.2.2",
+    "nodemon": "^1.19.4",
+    "typescript": "^3.7.2"
+  }
+}

@@ -1,0 +1,222 @@
+@import "../../../variables";
+
+.item-tile{
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    background-color: black;
+    width: 125px;
+    height: 125px;
+    color: white;
+    margin: 8px;
+    border: 1px solid black;
+    border-radius: 6px;  
+
+    @media (max-width: $desktop) {
+        width: 95px;
+        height: 95px;
+    }
+
+    @media (max-width: $tiny) {
+        width: 80px;
+        height: 80px;
+    }
+
+    .overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 1;
+        
+        &#fade{
+            background: linear-gradient(to top,black, transparent 35%);
+        }
+
+        &#fade-hover{
+            opacity: 0;
+            background: linear-gradient(to top, $revv-black, transparent 35%);
+        }
+    }
+    
+    .click-area{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background-color: transparent;
+        z-index: 4;
+        cursor: pointer;
+
+        &:hover ~ .overlay#fade{
+            opacity: 0;
+        }
+        &:hover ~ .overlay#fade-hover{
+            opacity: 100;
+        }
+    }
+
+    .image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        img{
+            position: absolute;
+            inset: 50% auto auto 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 6px;  
+            max-width: 120px;
+            max-height: 120px;
+    
+            @media (max-width: $desktop) {
+                max-width: 90px;
+                max-height: 90px;
+            }
+            @media (max-width: $tiny) {
+                width: 75px;
+                height: 75px;
+            }
+
+            &#rarity{
+                z-index: 0;
+            }
+        }
+    }
+
+    .label{
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        width: 100%;
+        margin: 0 0 4px 4px;
+        font-size: .75rem;
+        line-height: 12px;
+        color: white;
+
+        @media (max-width: $desktop) {
+            font-size: 10px;
+            margin-left: 2px;
+        } 
+        
+        &.composition{
+            z-index: 10;
+
+            &:hover{
+                cursor: pointer;
+                opacity:0;
+
+                & ~ .label.composition-unequip{
+                    opacity: 100;
+                }
+
+                & ~ .overlay#fade{
+                    opacity: 0;
+                }
+
+                & ~ .overlay#fade-hover{
+                    opacity: 100;
+                }
+            }
+        }
+
+        &.composition-unequip{
+            cursor: pointer;
+            color: $revv-red;
+            text-decoration: underline;
+            z-index: 9;
+            opacity: 0;
+        }
+    }
+
+    .icon{
+        position: absolute;
+        right: 4px;
+        top: 2px;
+        justify-self: right;
+        line-height: 0;
+        z-index: 2;
+
+        &#upgrade{
+            color:#13D613;
+        }
+    }
+
+
+    .center{
+        position: absolute;
+        inset: 50% auto auto 50%;
+        transform: translate(-50%,-50%);
+        z-index: 2;
+        pointer-events: none;
+
+        &#assignedTo{
+            padding: 0px 8px;
+            display:inline-block;
+            background-color:white;
+            border-radius: 12px;
+            color: grey;
+            font-size: .75rem;
+            font-weight: bold;
+            text-align: center;
+            text-transform: capitalize;
+
+            @media (max-width: $desktop) {
+                width: 75%;
+            }
+        }
+    }
+
+    .bottom{
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    &.selected{
+        border: 1px solid $revv-red;
+        box-shadow: 0 0 10px #decaed;
+    }
+}
+
+#workshop{
+    &#driver-composition{
+        width: 250px;
+    }
+    
+    &#add-more{
+        font-weight: normal;
+        color: $revv-red;
+        border: 2px solid $revv-red;
+        background-color: transparent;
+    }
+}
+
+
+#racing-game {
+    .item-tile {
+        width: 80px;
+        height: 80px;
+        margin: 0 5px;
+    
+        .image img{
+            max-width: 80px;
+            max-height: 80px;
+        }
+    
+        .label{
+            display: none;
+        }
+    
+        .equipped {
+            background: rgba(255,0,0,0.3);
+        }
+    }
+}

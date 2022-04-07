@@ -1,0 +1,69 @@
+@import '../../../variables';
+
+#wr-wrapper {
+    background: linear-gradient(270deg, #000000 0%, $revv-black 100%);
+    padding: 50px 0;
+}
+
+.tt-weekly-rewards {
+    display: flex;
+    align-items: center;
+    
+    .rev-img {
+        flex: 0 0 200px;
+        margin-right: 50px;
+
+        @media (max-width: $desktop) {
+            display: none;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .reward-desc {
+        flex: 1 1 auto;
+        padding-top: 10px;
+        border-top: 3px solid $revv-red;
+        text-align: left;
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .reward-tag {
+            .currency-icon{
+                padding:0 4px;
+                img{
+                    max-width: 24px;
+                }
+            }
+            font-size: 1.125rem;
+            background-color: $tt-white;
+            padding: 6px 10px 6px 0px;
+            display: inline-block;
+            font-weight: bold;
+            color: black;
+            border-radius: 18px;
+        }
+
+        .reward-tag+.reward-tag {
+            margin-left: 10px;
+
+            @media (max-width: $desktop) {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+#home {
+    @media (max-width: $desktop) {
+        h3 {
+            font-size: 12pt;
+            line-height: 16px;
+        }
+    }
+}

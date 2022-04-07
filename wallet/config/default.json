@@ -1,0 +1,13 @@
+{
+  "mongodb": {
+    "url": "mongodb://user:password@localhost:27017/revv?authSource=admin"
+  },
+  "api": {
+    "access_control": [
+      {
+        "regex": "http[s]?:\/\/localhost:[0-9]{4}"
+      }
+    ]
+  },
+  "contractAddress": "0x6ce16F115cE95FAB92c43CCE0d42dF54ca08dB2b"
+}
